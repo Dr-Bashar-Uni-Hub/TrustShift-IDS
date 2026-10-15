@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# raw and processed datasets are never committed
+data/
+*.parquet
+# large intermediate arrays (archive on Zenodo instead)
+*_FLOAT64_STREAM_FEATURES.npz
+*_features.npz
