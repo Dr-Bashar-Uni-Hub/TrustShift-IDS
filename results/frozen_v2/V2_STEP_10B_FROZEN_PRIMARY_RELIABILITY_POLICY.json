@@ -1,0 +1,46 @@
+{
+  "step": "V2.10B",
+  "status": "FROZEN_BEFORE_SHIFTED_ADAPTIVE_EVALUATION",
+  "primary_operational_epsilon": 0.01,
+  "risk_score_definition": "1 - calibrated maximum predicted probability",
+  "acceptance_rule": "accept iff risk_score <= state-specific threshold",
+  "state_definition": {
+    "Normal": "SSS <= 0.4413449708140494",
+    "Elevated": "0.4413449708140494 < SSS <= 0.6791419174145775",
+    "Severe": "SSS > 0.6791419174145775"
+  },
+  "thresholds": {
+    "Normal": {
+      "binary": 0.49778103828430176,
+      "multiclass": 0.49221134185791016,
+      "derivation": "original frozen confidence-only policy"
+    },
+    "Elevated": {
+      "binary": 0.0012131255763865,
+      "multiclass": 0.0016204167165527,
+      "derivation": "99% source-calibration coverage contraction"
+    },
+    "Severe": {
+      "binary": 4.613128198549532e-05,
+      "multiclass": 8.730944055290735e-05,
+      "derivation": "90% source-calibration coverage contraction"
+    }
+  },
+  "design_rationale": {
+    "state_based_not_continuous": "SSS is a regime-warning statistic, not a calibrated risk estimator.",
+    "elevated": "moderate contraction retaining approximately 99% source-calibration coverage",
+    "severe": "stronger but operationally non-degenerate contraction retaining approximately 90% source-calibration coverage"
+  },
+  "candidate_selection_basis": "source calibration only",
+  "V2_10A_absolute_risk_rule": "rejected at calibration-only sanity gate because it inverted state strictness",
+  "shifted_adaptive_performance_used_for_selection": false,
+  "iid_test_outcomes_used_for_selection": false,
+  "shifted_labels_used_for_selection": false,
+  "shifted_errors_used_for_selection": false,
+  "shifted_RCV_used_for_selection": false,
+  "model_refit": false,
+  "temperature_refit": false,
+  "monitor_modified": false,
+  "normalization_modified": false,
+  "policy_frozen": true
+}

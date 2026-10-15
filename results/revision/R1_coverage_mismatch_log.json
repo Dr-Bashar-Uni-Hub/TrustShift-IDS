@@ -1,0 +1,16 @@
+[
+  {
+    "state": "elevated",
+    "task": "binary",
+    "now": 0.9899849701769007,
+    "frozen": 0.99001,
+    "note": "RN-1 stored-threshold rounding; tied rows at quantile"
+  },
+  {
+    "state": "elevated",
+    "task": "multiclass",
+    "now": 0.9899958877239462,
+    "frozen": 0.99,
+    "note": "RN-1 stored-threshold rounding; tied rows at quantile"
+  }
+]

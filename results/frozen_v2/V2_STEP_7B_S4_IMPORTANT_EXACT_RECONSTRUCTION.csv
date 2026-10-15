@@ -1,0 +1,5 @@
+severity,k,selected_features,historical_selected_features,row_identity_match,binary_prediction_match_fraction,multiclass_prediction_match_fraction,binary_confidence_mean_abs_diff,binary_confidence_max_abs_diff,multiclass_confidence_mean_abs_diff,multiclass_confidence_max_abs_diff,binary_confidence_allclose,multiclass_confidence_allclose,exact_reconstruction_pass
+0.05,3,F13|F52|F35,F13|F52|F35,True,1.0,1.0,0.0,0.0,1.5091189325100657e-13,3.946103444008031e-10,True,True,True
+0.1,7,F13|F52|F35|F73|F68|F39|F67,F13|F52|F35|F73|F68|F39|F67,True,1.0,1.0,0.0,0.0,1.5074188877632764e-13,3.946103444008031e-10,True,True,True
+0.2,14,F13|F52|F35|F73|F68|F39|F67|F12|F75|F38|F06|F09|F23|F08,F13|F52|F35|F73|F68|F39|F67|F12|F75|F38|F06|F09|F23|F08,True,1.0,1.0,0.0,0.0,7.301839227413199e-14,5.637279532066941e-11,True,True,True
+0.3,20,F13|F52|F35|F73|F68|F39|F67|F12|F75|F38|F06|F09|F23|F08|F37|F40|F30|F03|F66|F70,F13|F52|F35|F73|F68|F39|F67|F12|F75|F38|F06|F09|F23|F08|F37|F40|F30|F03|F66|F70,True,1.0,1.0,0.0,0.0,2.928420778962079e-13,5.637279532066941e-11,True,True,True

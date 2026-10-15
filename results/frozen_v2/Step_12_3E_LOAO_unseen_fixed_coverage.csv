@@ -1,0 +1,81 @@
+target_coverage,accepted,empirical_coverage,selective_risk,risk_threshold,held_out_family,task,evaluation_population
+0.5,9602,0.5000260375982919,0.7422411997500521,0.0039846924138888795,DDoS,binary,unseen_family_only
+0.75,14403,0.750039056397438,0.49503575643963066,0.017541252216778824,DDoS,binary,unseen_family_only
+0.9,17283,0.9000156225589752,0.41375918532662154,0.05470184025918401,DDoS,binary,unseen_family_only
+0.95,18243,0.9500078112794876,0.39313709367976757,0.08602139763831929,DDoS,binary,unseen_family_only
+0.975,18723,0.9750039056397438,0.3854083213160284,0.16591261819301684,DDoS,binary,unseen_family_only
+0.99,19011,0.9900015622558975,0.38209457682394404,0.30316184510417554,DDoS,binary,unseen_family_only
+0.995,19107,0.9950007811279488,0.3806981734442874,0.40801228553162905,DDoS,binary,unseen_family_only
+1.0,19203,1.0,0.38051346143831694,0.49915045919440815,DDoS,binary,unseen_family_only
+0.5,9602,0.5000260375982919,,0.06065015032734966,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.75,14403,0.750039056397438,,0.20236090445963373,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.9,17283,0.9000156225589752,,0.387674886922311,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.95,18243,0.9500078112794876,,0.4427887862033466,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.975,18723,0.9750039056397438,,0.4781220460925857,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.99,19011,0.9900015622558975,,0.5133937848255472,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.995,19107,0.9950007811279488,,0.5308438573803517,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+1.0,19203,1.0,,0.599557547506951,DDoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.5,18557,0.5,1.0,0.0014843218563806992,DoS,binary,unseen_family_only
+0.75,27836,0.7500134720051732,0.9967308521339273,0.017229953728207792,DoS,binary,unseen_family_only
+0.9,33403,0.9000107776041386,0.9965272580307158,0.04650841980618481,DoS,binary,unseen_family_only
+0.95,35259,0.9500188608072425,0.9966533367367197,0.08103626986169066,DoS,binary,unseen_family_only
+0.975,36187,0.9750229024087945,0.9946665929753779,0.24798239315937787,DoS,binary,unseen_family_only
+0.99,36743,0.9900037721614485,0.9915630188063033,0.3589094689694412,DoS,binary,unseen_family_only
+0.995,36929,0.9950153580858975,0.9892225622139782,0.39852011921856123,DoS,binary,unseen_family_only
+1.0,37114,1.0,0.987444091178531,0.4993902196603177,DoS,binary,unseen_family_only
+0.5,18557,0.5,,0.0006883953562571987,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.75,27836,0.7500134720051732,,0.0024059976440899966,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.9,33403,0.9000107776041386,,0.008610277917313058,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.95,35259,0.9500188608072425,,0.026281138223767764,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.975,36187,0.9750229024087945,,0.09491683203326362,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.99,36743,0.9900037721614485,,0.23895770327419663,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.995,36929,0.9950153580858975,,0.38018648389455734,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+1.0,37114,1.0,,0.5605718467975989,DoS,multiclass,unseen_family_only_no_closed_set_error_definition
+0.5,1038,0.5002409638554217,1.0,6.262540030133046e-05,Brute Force,binary,unseen_family_only
+0.75,1557,0.7503614457831326,1.0,0.0006761179155390096,Brute Force,binary,unseen_family_only
+0.9,1868,0.9002409638554217,1.0,0.011361876738702037,Brute Force,binary,unseen_family_only
+0.95,1972,0.9503614457831325,1.0,0.04928310413947412,Brute Force,binary,unseen_family_only
+0.975,2024,0.9754216867469879,1.0,0.04928310413947412,Brute Force,binary,unseen_family_only
+0.99,2055,0.9903614457831326,1.0,0.04928310413947412,Brute Force,binary,unseen_family_only
+0.995,2065,0.9951807228915662,1.0,0.04928310413947412,Brute Force,binary,unseen_family_only
+1.0,2075,1.0,1.0,0.04928310413947412,Brute Force,binary,unseen_family_only
+0.5,1038,0.5002409638554217,,0.00020303224278983567,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+0.75,1557,0.7503614457831326,,0.0007124385133083777,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+0.9,1868,0.9002409638554217,,0.00988596210292636,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+0.95,1972,0.9503614457831325,,0.01211658604863719,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+0.975,2024,0.9754216867469879,,0.017659921543106027,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+0.99,2055,0.9903614457831326,,0.017659921543106027,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+0.995,2065,0.9951807228915662,,0.017659921543106027,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+1.0,2075,1.0,,0.02046168984093033,Brute Force,multiclass,unseen_family_only_no_closed_set_error_definition
+0.5,139,0.5018050541516246,1.0,5.240489748814525e-06,Botnet,binary,unseen_family_only
+0.75,208,0.7509025270758123,1.0,2.1452808709132576e-05,Botnet,binary,unseen_family_only
+0.9,250,0.9025270758122743,1.0,2.597124170744536e-05,Botnet,binary,unseen_family_only
+0.95,264,0.9530685920577617,1.0,3.5832701060334315e-05,Botnet,binary,unseen_family_only
+0.975,271,0.9783393501805054,1.0,0.00015932196411438948,Botnet,binary,unseen_family_only
+0.99,275,0.9927797833935018,1.0,0.0012947700913579219,Botnet,binary,unseen_family_only
+0.995,276,0.9963898916967509,1.0,0.0012969481838308594,Botnet,binary,unseen_family_only
+1.0,277,1.0,1.0,0.0012969481838308594,Botnet,binary,unseen_family_only
+0.5,139,0.5018050541516246,,1.3100561948364842e-05,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+0.75,208,0.7509025270758123,,1.656884661327407e-05,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+0.9,250,0.9025270758122743,,2.098280565498989e-05,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+0.95,264,0.9530685920577617,,3.302283235151471e-05,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+0.975,271,0.9783393501805054,,5.418327692741087e-05,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+0.99,275,0.9927797833935018,,0.00011194333499064957,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+0.995,276,0.9963898916967509,,0.00011496787253639784,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+1.0,277,1.0,,0.00012097543551792267,Botnet,multiclass,unseen_family_only_no_closed_set_error_definition
+0.5,164,0.5015290519877675,0.24390243902439024,0.31086875483639476,Web Attack,binary,unseen_family_only
+0.75,246,0.7522935779816514,0.16260162601626016,0.3569322074558352,Web Attack,binary,unseen_family_only
+0.9,295,0.9021406727828746,0.13559322033898305,0.4045511685602966,Web Attack,binary,unseen_family_only
+0.95,311,0.9510703363914373,0.12861736334405144,0.415975802816023,Web Attack,binary,unseen_family_only
+0.975,319,0.9755351681957186,0.13479623824451412,0.430805916770703,Web Attack,binary,unseen_family_only
+0.99,324,0.9908256880733946,0.13271604938271606,0.4350145144295414,Web Attack,binary,unseen_family_only
+0.995,326,0.9969418960244648,0.13190184049079753,0.45000031081206127,Web Attack,binary,unseen_family_only
+1.0,327,1.0,0.13149847094801223,0.45000031081206127,Web Attack,binary,unseen_family_only
+0.5,164,0.5015290519877675,,0.4554964005095431,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition
+0.75,246,0.7522935779816514,,0.5169641857559413,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition
+0.9,295,0.9021406727828746,,0.5883337618454463,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition
+0.95,311,0.9510703363914373,,0.6210931794453549,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition
+0.975,319,0.9755351681957186,,0.641148239040749,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition
+0.99,324,0.9908256880733946,,0.656825409946048,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition
+0.995,326,0.9969418960244648,,0.662058851859231,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition
+1.0,327,1.0,,0.6713266630613247,Web Attack,multiclass,unseen_family_only_no_closed_set_error_definition

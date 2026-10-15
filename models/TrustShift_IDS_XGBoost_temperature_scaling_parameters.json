@@ -1,0 +1,18 @@
+{
+  "step": "7.2",
+  "model": "XGBoost",
+  "seed": 42,
+  "calibration_method": "scalar_temperature_scaling",
+  "calibration_partition": "CICIDS2017_calibration",
+  "calibration_rows": 274787,
+  "binary_temperature": 0.9744155346869672,
+  "multiclass_temperature": 1.1709901909513676,
+  "binary_optimized_nll": 0.0015063058999436,
+  "multiclass_optimized_nll": 0.0018702244889216254,
+  "probability_to_logit_transform": "log(clipped_probability)",
+  "temperature_application": "softmax(log(probability)/T)",
+  "argmax_preserving": true,
+  "iid_test_accessed": false,
+  "ambiguity_stress_accessed": false,
+  "distribution_shift_data_accessed": false
+}

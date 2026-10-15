@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code or results, please cite the article below."
+title: "TrustShift-IDS: evaluation code and results"
+authors:
+  - family-names: ALHAJAHMAD
+    given-names: Bashar
+    affiliation: Siirt University
+    orcid: "https://orcid.org/0009-0009-3455-7206"
+repository-code: "https://github.com/Dr-Bashar-Uni-Hub/TrustShift-IDS"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Can Label-Free Shift Monitoring Make Selective Intrusion Detection Reliable? An Evaluation under Synthetic, Cross-Dataset, and Unseen-Attack Shift"
+  authors:
+    - family-names: ALHAJAHMAD
+      given-names: Bashar
+  journal: "Journal of Cyber Security Technology"
+  year: 2026
+  notes: "Submitted"

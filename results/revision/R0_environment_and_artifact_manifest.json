@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-10-15 12:03:11",
+  "python": "3.13.15",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "numpy": "2.1.3",
+  "pandas": "2.2.3",
+  "sklearn": "1.6.1",
+  "scipy": "1.16.3",
+  "xgboost": "3.4.1",
+  "artifacts": {
+    "model_b": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/models/xgboost/XGB_binary_seed42.joblib",
+      "bytes": 499519,
+      "sha256": "3dd240fe174f07cb62ead9e2d0bb321b46650c137285ea5b395451ca5a1f52ed"
+    },
+    "model_m": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/models/xgboost/XGB_multiclass_seed42.joblib",
+      "bytes": 2016372,
+      "sha256": "6ee55e581a0158cf2436f0b97ca66cf0e2fbedd8b4d4a38e19158cf1878c8a0e"
+    },
+    "policy_json": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/adaptive_policy/V2_STEP_10B_FROZEN_PRIMARY_RELIABILITY_POLICY.json",
+      "bytes": 1881,
+      "sha256": "434ff55eb6ff35b4e8a1618060b3e5af48d41907ffe3c87c6b9161151e90d31b"
+    },
+    "cal": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/data/processed/CICIDS2017_68F_imputed/CICIDS2017_calibration_68F_imputed.parquet",
+      "bytes": 38005543,
+      "sha256": "da8fa5b1bb8a00c8537d3b6870d5c08f653698ee09c1a76ee0f87cf4fc8d3ff5"
+    },
+    "iid": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/data/processed/CICIDS2017_68F_imputed/CICIDS2017_iid_test_68F_imputed.parquet",
+      "bytes": 56935576,
+      "sha256": "d159ac3e615a2f8c8f0b265dc566febf8355b28a7c5fd5c95ee90f95132ec33a"
+    },
+    "s3_protocol": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/controlled_shifts/S3_corruption/V2_STEP_6D_S3_CORRUPTION_REALIZATION.json",
+      "bytes": 4143,
+      "sha256": "14be8c959d80a91715db8e01cf0ee20d0dddb04db6d22754c6a763faf409be93"
+    },
+    "medians": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/controlled_shifts/Level2_compounds/reconstruction_reference/V2_FULL_TRAINING_FEATURE_MEDIANS_68F.npy",
+      "bytes": 672,
+      "sha256": "44fa27a24dcfbb9274bbe9f5cdc72aa49069d3566ac34b9dd03dee790ed5d4e7"
+    },
+    "s4_recon": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/artifact_audits/V2_STEP_7B_S4_IMPORTANT_EXACT_RECONSTRUCTION.csv",
+      "bytes": 1066,
+      "sha256": "39270f2102f408b4844be8dcceca731e8335d74b7ade545717ac00db1ce427f8"
+    },
+    "s3_monitor": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/controlled_shifts/S3_corruption/V2_S3_PAIRED_PRIMARY_SSS_ALL_CONDITIONS.csv",
+      "bytes": 214878,
+      "sha256": "c6ef1b0727cc603e56ff2673e092bdd0da7711108259103e2aac977ab69934be"
+    },
+    "s4_monitor": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/controlled_shifts/S4_missing_features/V2_S4_IMPORTANT_PRIMARY_SSS_windows.csv",
+      "bytes": 192426,
+      "sha256": "b26e98099b90b56cffea155b69722d29181b27f3f1989821f8bae49ecbc20368"
+    },
+    "s3_frozen_out": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/adaptive_policy/primary_evaluation/S3/V2_STEP_11B_S3_PRIMARY_ADAPTIVE_WINDOW_RESULTS.csv",
+      "bytes": 167725,
+      "sha256": "f20417dd9446ebf687443ab621b130827976355209c2c69b4b2ebf8d60ece2f7"
+    },
+    "s4_frozen_out": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/adaptive_policy/primary_evaluation/S4/V2_STEP_11E_S4_PRIMARY_ADAPTIVE_WINDOW_RESULTS.csv",
+      "bytes": 118284,
+      "sha256": "ca2d7cb83115fb5a4e8a5eada9957b64cdd6eeb66d440000b63023535325cd1a"
+    },
+    "ms_monitor": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/robustness_evaluation/multiseed_streaming/V2_STEP_13C_MULTI_SEED_LABEL_FREE_MONITORING_WINDOWS.csv",
+      "bytes": 162578,
+      "sha256": "439a72a6d04719ba50058a17b79721414d16246aaa78e2c109bc43d8992516c0"
+    },
+    "ms_frozen_out": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/robustness_evaluation/multiseed_streaming/V2_STEP_13D_MULTI_SEED_FROZEN_POLICY_WINDOW_OUTCOMES.csv",
+      "bytes": 57100,
+      "sha256": "ea4adf7a654c50fbc910244c3aca03ef0fe9767928e3559fb3ea84b16e70d01f"
+    },
+    "s1_monitor": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/deployment_evaluation/V2_S1_EXTERNAL_PRIMARY_SSS_windows.csv",
+      "bytes": 1785058,
+      "sha256": "d17e668380ce673d885685a919724387deaa33b033c2232aa5b6635157d132c0"
+    },
+    "s1_frozen_out": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/deployment_evaluation/V2_S1_EXTERNAL_SSS_RELIABILITY_ASSOCIATION.csv",
+      "bytes": 1964186,
+      "sha256": "6e8ae172af5c5dc5ef0b1a977d64ed55823ebdad670da95c73cd52c85ad55d9b"
+    },
+    "null_sss": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/shift_monitoring/V2_source_null_PRIMARY_SSS.csv",
+      "bytes": 7162,
+      "sha256": "f045b22cf4f5205a50d9e1410a6b878d317d2b05fa0f309e3d4ff50bd4565e49"
+    },
+    "norm_params": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/shift_monitoring/V2_monitoring_normalization_parameters.csv",
+      "bytes": 3855,
+      "sha256": "4aee537ac47ceaff6e9569a79f2315770c20762906fdd94f767b6f97e9212ef9"
+    },
+    "ablation_win": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/ablation_evaluation/primary_monitor_family_ablation/V2_STEP_14B_LABEL_FREE_FAMILY_ABLATION_WINDOWS.csv",
+      "bytes": 117690,
+      "sha256": "9238c5848965956c4e5786fc65ab321093d13e5f6fd33319d253e232029e421c"
+    },
+    "ablation_out": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/ablation_evaluation/primary_monitor_family_ablation/V2_STEP_14C_FAMILY_ABLATION_WINDOW_OUTCOMES.csv",
+      "bytes": 239069,
+      "sha256": "12f8a1c0f0ef8960944b538bd4d53eed4ec274a858d836604756030897bc83ff"
+    },
+    "l2_out": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/adaptive_policy/primary_evaluation/Level2_compounds/V2_STEP_11F_C_LEVEL2_FROZEN_ADAPTIVE_WINDOW_RESULTS.csv",
+      "bytes": 92966,
+      "sha256": "bb1a2a223d7e1ba509586ffdf4f3171e0dcd88f2b3eba2e2184f0145a5e93fef"
+    },
+    "loao_fixed": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/results/shift_evaluation/S2_LOAO/Step_12_3E_LOAO_unseen_fixed_coverage.csv",
+      "bytes": 8539,
+      "sha256": "75956185db6539d73ad6808b8740f5c9b68314450b0d03b46975ae38318df7eb"
+    },
+    "ms_X_1": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/robustness_evaluation/multiseed_streaming/V2_STEP_13B_SEED_1_FLOAT64_STREAM_FEATURES.npz",
+      "bytes": 37833851,
+      "sha256": "873e531335e26c9774523eecf16a4ebb5e5a84750e3ff16689873dfc050642f1"
+    },
+    "ms_X_7": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/robustness_evaluation/multiseed_streaming/V2_STEP_13B_SEED_7_FLOAT64_STREAM_FEATURES.npz",
+      "bytes": 37851277,
+      "sha256": "4fe269b2f3be7c9bc6f485e982d5bb351a44123b050c8ee6a872195bd2bc05d6"
+    },
+    "ms_X_21": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/robustness_evaluation/multiseed_streaming/V2_STEP_13B_SEED_21_FLOAT64_STREAM_FEATURES.npz",
+      "bytes": 37796532,
+      "sha256": "b6f3e82e98366ed76a0cd6763af747b70a7d459d68ca56390e1c3fa7550b7c95"
+    },
+    "ms_X_42": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/robustness_evaluation/multiseed_streaming/V2_STEP_13B_SEED_42_FLOAT64_STREAM_FEATURES.npz",
+      "bytes": 37802616,
+      "sha256": "6d7504cf421be55f179e04f96bdeede015c3634b25a622574467fdded0128f92"
+    },
+    "ms_X_84": {
+      "path": "/content/drive/MyDrive/TrustShift_IDS/V2_adaptive_reliability/robustness_evaluation/multiseed_streaming/V2_STEP_13B_SEED_84_FLOAT64_STREAM_FEATURES.npz",
+      "bytes": 37806747,
+      "sha256": "ec6424075a5c37f55393462dbaa5ddc5b1d52968d284205e956a82b8e86fc560"
+    }
+  }
+}

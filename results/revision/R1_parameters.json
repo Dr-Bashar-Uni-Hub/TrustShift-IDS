@@ -1,0 +1,13 @@
+{
+  "ATC": {
+    "binary": {
+      "source_error": 0.0005022071640943713,
+      "conf_threshold": 0.707793757369538
+    },
+    "multiclass": {
+      "source_error": 0.00057862999341308,
+      "conf_threshold": 0.7085459420186658
+    }
+  },
+  "posthoc": true
+}
