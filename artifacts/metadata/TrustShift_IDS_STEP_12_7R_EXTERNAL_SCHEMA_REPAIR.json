@@ -1,0 +1,14 @@
+{
+  "step": "12.7R",
+  "parent_step": "12.7",
+  "reason": "Step 12.7 external loader expected Fxx column names, but frozen CSE-CIC-IDS2018 68F parquet shards store the 68 predictive features under CICIDS2017 semantic names.",
+  "correction": "Derive exact model feature order from the frozen 68-feature manifest using cicids2017_feature ordered by feature_id after excluding constant-removed features.",
+  "experimental_protocol_changed": false,
+  "models_changed": false,
+  "temperatures_changed": false,
+  "thresholds_changed": false,
+  "severities_changed": false,
+  "compound_definitions_changed": false,
+  "source_compounds_recomputed": false,
+  "external_compounds_to_complete": 4
+}

@@ -1,0 +1,160 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_6_2_COMPLETE",
+  "status": "FROZEN",
+  "created_utc": "2026-09-20T10:06:46.682851+00:00",
+  "seed": 42,
+  "tasks": {
+    "binary": {
+      "Benign": 0,
+      "Attack": 1
+    },
+    "multiclass": {
+      "Benign": 0,
+      "DDoS": 1,
+      "DoS": 2,
+      "Brute Force": 3,
+      "Web Attack": 4,
+      "Botnet": 5,
+      "Infiltration": 6,
+      "Port Scan": 7,
+      "Heartbleed": 8
+    }
+  },
+  "models": {
+    "RandomForest": {
+      "family": "tree_ensemble",
+      "representation": "raw_imputed",
+      "probabilities_required": true
+    },
+    "XGBoost": {
+      "family": "gradient_boosted_trees",
+      "representation": "raw_imputed",
+      "probabilities_required": true
+    },
+    "MLP": {
+      "family": "neural",
+      "representation": "neural",
+      "probabilities_required": true
+    },
+    "FTTransformer": {
+      "family": "tabular_transformer",
+      "representation": "neural",
+      "probabilities_required": true
+    }
+  },
+  "partition_usage": {
+    "train": "fit_model_parameters",
+    "validation": "model_selection_and_early_stopping",
+    "calibration": "reserved_for_posthoc_calibration_and_trust",
+    "iid_test": "reserved_for_final_iid_evaluation",
+    "ambiguity_stress": "reserved_for_stress_evaluation"
+  },
+  "model_selection": {
+    "primary_metric": "validation_macro_f1",
+    "reason": "Macro-F1 gives each class equal contribution and prevents the majority Benign class from dominating model selection.",
+    "secondary_metrics": [
+      "validation_balanced_accuracy",
+      "validation_weighted_f1",
+      "validation_accuracy"
+    ],
+    "probability_metrics_for_diagnostics": [
+      "log_loss",
+      "roc_auc",
+      "average_precision"
+    ],
+    "iid_test_used_for_selection": false,
+    "calibration_used_for_selection": false
+  },
+  "class_imbalance_policy": {
+    "primary_baselines_use_natural_distribution": true,
+    "oversampling": false,
+    "undersampling": false,
+    "smote": false,
+    "automatic_class_weighting": false,
+    "rationale": "Primary baselines preserve the natural source distribution. Minority-class behavior is measured explicitly rather than hidden through resampling.",
+    "possible_later_sensitivity_analysis": "class weighting / rebalancing may be evaluated separately"
+  },
+  "metrics": {
+    "common": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_precision",
+      "macro_recall",
+      "macro_f1",
+      "weighted_precision",
+      "weighted_recall",
+      "weighted_f1",
+      "log_loss"
+    ],
+    "binary_probability": [
+      "roc_auc",
+      "average_precision"
+    ],
+    "multiclass_probability": [
+      "roc_auc_ovr_macro",
+      "roc_auc_ovr_weighted"
+    ],
+    "required_diagnostics": [
+      "confusion_matrix",
+      "per_class_precision",
+      "per_class_recall",
+      "per_class_f1",
+      "per_class_support",
+      "predicted_probabilities",
+      "predicted_labels",
+      "true_labels"
+    ]
+  },
+  "probability_policy": {
+    "persist_uncalibrated_probabilities": true,
+    "probability_order_must_match_frozen_class_indices": true,
+    "no_temperature_scaling_during_baseline_training": true,
+    "no_probability_calibration_during_model_selection": true,
+    "calibration_occurs_later_using_calibration_partition": true,
+    "purpose": [
+      "posthoc calibration",
+      "predictive uncertainty",
+      "OOD evidence",
+      "trust estimation",
+      "risk_coverage",
+      "selective_prediction"
+    ]
+  },
+  "reproducibility": {
+    "primary_seed": 42,
+    "deterministic_where_supported": true,
+    "persist_model_configuration": true,
+    "persist_training_history": true,
+    "persist_validation_predictions": true,
+    "persist_environment_information": true,
+    "multiple_seed_evaluation": "performed later for selected/final configurations",
+    "minimum_final_seeds": 5
+  },
+  "training_strategy": {
+    "stage_1": "train candidate baseline on TRAIN only",
+    "stage_2": "evaluate candidate on VALIDATION",
+    "stage_3": "select/freeze configuration using VALIDATION only",
+    "stage_4": "evaluate frozen baseline on IID TEST",
+    "stage_5": "fit posthoc calibration/trust components using CALIBRATION only",
+    "stage_6": "evaluate selective reliability and shift robustness",
+    "early_stopping_allowed": true,
+    "early_stopping_partition": "validation",
+    "refit_on_train_plus_validation_before_calibration": false,
+    "reason_no_refit": "Keep the fitted predictor independent of the reserved calibration partition and preserve a clear development/test protocol."
+  },
+  "artifact_requirements": [
+    "model_file",
+    "model_configuration_json",
+    "training_history_if_applicable",
+    "validation_metrics_csv",
+    "validation_confusion_matrix_csv",
+    "validation_per_class_metrics_csv",
+    "validation_predictions_parquet",
+    "validation_probabilities_parquet"
+  ],
+  "model_training_performed": false,
+  "calibration_performed": false,
+  "dataset_modified": false,
+  "next_step": "STEP_6_3_RANDOM_FOREST_BASELINE"
+}

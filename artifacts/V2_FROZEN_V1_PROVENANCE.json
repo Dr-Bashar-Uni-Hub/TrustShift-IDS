@@ -1,0 +1,22 @@
+{
+  "study": "TrustShift-IDS V2",
+  "purpose": "Shift-aware adaptive selective reliability extension",
+  "v1_base_directory": "/content/drive/MyDrive/TrustShift_IDS",
+  "v1_seed": 42,
+  "v1_status": "FROZEN_BASELINE",
+  "canonical_correction": "group-aware Step 9R / Step 10R / Step 11R",
+  "superseded_artifacts_allowed": false,
+  "v2_rule": "V1 artifacts remain unchanged. V2 outputs must be written only under V2_adaptive_reliability.",
+  "expected_anchor_values": {
+    "binary_temperature": 0.9744155346869672,
+    "multiclass_temperature": 1.1709901909513676,
+    "binary_threshold": 0.49778103828430176,
+    "multiclass_threshold": 0.49221134185791016,
+    "iid_binary_aurc": 3.7799e-06,
+    "iid_multiclass_aurc": 3.0251e-06,
+    "s1_binary_error": 0.168778,
+    "s1_multiclass_error": 0.170055,
+    "s1_binary_aurc": 0.08969,
+    "s1_multiclass_aurc": 0.070983
+  }
+}

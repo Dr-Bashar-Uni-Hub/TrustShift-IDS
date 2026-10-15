@@ -1,0 +1,43 @@
+{
+  "step": "12.3C",
+  "shift": "S2 strict LOAO",
+  "held_out_families": [
+    "DDoS",
+    "DoS",
+    "Brute Force",
+    "Botnet",
+    "Web Attack"
+  ],
+  "model_family": "XGBoost",
+  "binary_models": 5,
+  "multiclass_models": 5,
+  "total_models": 10,
+  "model_configuration": {
+    "n_estimators": 300,
+    "max_depth": 8,
+    "learning_rate": 0.1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 1,
+    "gamma": 0,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "tree_method": "hist",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "binary_objective": "binary:logistic",
+  "multiclass_objective": "multi:softprob",
+  "multiclass_num_known_classes": 8,
+  "multiclass_mapping": "local contiguous 0..7 mapped to canonical family names",
+  "preprocessing": "LOAO training-only F14/F15 median imputation from Step 12.3B",
+  "held_out_family_used_for_training": false,
+  "validation_used_for_training": false,
+  "calibration_used_for_training": false,
+  "iid_test_used_for_training": false,
+  "external_data_used_for_training": false,
+  "resampling": false,
+  "class_weighting": false,
+  "seed": 42,
+  "status": "training_complete_awaiting_review"
+}

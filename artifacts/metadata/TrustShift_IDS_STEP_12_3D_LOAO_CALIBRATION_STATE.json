@@ -1,0 +1,26 @@
+{
+  "step": "12.3D",
+  "shift": "S2 strict LOAO",
+  "held_out_families": [
+    "DDoS",
+    "DoS",
+    "Brute Force",
+    "Botnet",
+    "Web Attack"
+  ],
+  "validation_role": "diagnostic only",
+  "calibration_role": "temperature fitting only",
+  "temperature_method": "scalar temperature scaling",
+  "temperature_bounds": [
+    0.05,
+    20.0
+  ],
+  "binary_output_classes": 2,
+  "multiclass_output_classes": 8,
+  "multiclass_space": "LOAO-local contiguous known-class space",
+  "held_out_family_used_for_temperature_fit": false,
+  "iid_test_accessed": false,
+  "external_data_accessed": false,
+  "model_retraining_in_step12_3D": false,
+  "status": "validation_and_calibration_complete_awaiting_review"
+}

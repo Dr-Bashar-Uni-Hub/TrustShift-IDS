@@ -1,0 +1,28 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_5_5B_COMPLETE",
+  "created_utc": "2026-09-20T10:03:19.632764+00:00",
+  "fit_population": "CICIDS2017 training partition only",
+  "training_rows": 1648724,
+  "total_features": 68,
+  "continuous_features": 56,
+  "binary_features": 10,
+  "sentinel_features": 2,
+  "continuous_policy": {
+    "clip_quantiles": [
+      0.001,
+      0.999
+    ],
+    "standardization": "population mean/std after clipping",
+    "ddof": 0
+  },
+  "binary_policy": "preserve raw 0/1",
+  "sentinel_policy": "preserve raw values including -1",
+  "raw_imputed_representation_preserved": true,
+  "transformed_datasets_materialized": false,
+  "total_training_values_clipped": 76827,
+  "overall_training_clipped_pct": 0.08321045331333288,
+  "max_abs_standardized_train_mean": 2.6878440141519097e-16,
+  "max_abs_standardized_train_std_error": 8.881784197001252e-16,
+  "next_step": "STEP_5_5C_MATERIALIZE_NEURAL_REPRESENTATION"
+}

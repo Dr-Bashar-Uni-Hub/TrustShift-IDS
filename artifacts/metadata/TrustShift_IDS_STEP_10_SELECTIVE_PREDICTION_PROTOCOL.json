@@ -1,0 +1,26 @@
+{
+  "step": "10",
+  "development_source": "Step 9 untouched calibration-holdout subset",
+  "primary_risk_method_binary": "confidence_only",
+  "primary_risk_method_multiclass": "confidence_only",
+  "ablation_risk_method": "fused",
+  "acceptance_rule": "accept if risk_score <= threshold",
+  "abstention_rule": "abstain if risk_score > threshold",
+  "coverage_definition": "accepted_count / total_count",
+  "selective_risk_definition": "prediction errors among accepted samples / accepted samples",
+  "aurc_definition": "mean empirical selective risk over all nonzero prefix coverage levels after sorting samples from lowest to highest predicted risk",
+  "coverage_at_risk_definition": "maximum empirical calibration-holdout coverage whose selective risk is <= epsilon",
+  "risk_budgets": [
+    0.01,
+    0.025,
+    0.05,
+    0.1
+  ],
+  "threshold_source": "calibration-holdout only",
+  "threshold_transfer_policy": "freeze calibration-derived thresholds and apply unchanged to IID and later shifted datasets",
+  "tie_handling": "stable mergesort; threshold acceptance uses <=; later transferred datasets may therefore have different coverage when scores tie",
+  "iid_test_accessed": false,
+  "ambiguity_stress_accessed": false,
+  "external_shift_data_accessed": false,
+  "model_fitting_performed": false
+}

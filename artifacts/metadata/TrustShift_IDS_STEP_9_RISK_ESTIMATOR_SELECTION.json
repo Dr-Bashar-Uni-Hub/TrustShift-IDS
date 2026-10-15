@@ -1,0 +1,17 @@
+{
+  "binary_selected_risk_method": "confidence_only",
+  "binary_confidence_holdout_auprc": 0.2730435917049778,
+  "binary_fused_holdout_auprc": 0.1519143913827465,
+  "multiclass_selected_risk_method": "confidence_only",
+  "multiclass_confidence_holdout_auprc": 0.28158327591307536,
+  "multiclass_fused_holdout_auprc": 0.22964202169927295,
+  "selection_metric": "group-disjoint calibration holdout error AUPRC",
+  "selection_rule": "select fused iff fused holdout AUPRC >= confidence-only holdout AUPRC; otherwise confidence_only",
+  "split_method": "StratifiedGroupKFold(n_splits=2, shuffle=True, random_state=42)",
+  "group_key": "feature_hash",
+  "group_overlap": 0,
+  "supersedes_original_step9": true,
+  "supersession_reason": "Original Step-9 calibration development/holdout partition was row-level despite duplicate feature_hash groups. Corrected before any distribution-shift evaluation.",
+  "iid_used_for_fitting_or_selection": false,
+  "seed": 42
+}

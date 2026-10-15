@@ -1,0 +1,33 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_5_1_COMPLETE",
+  "seed": 42,
+  "input_split_sha256": "62e60eb56510e46776170786892d7fdb8598f0d1646c964849c2e26dd1de1408",
+  "source_rows": 2830743,
+  "structural_harmonized_features": 76,
+  "constant_features_removed": 8,
+  "materialized_model_features": 68,
+  "header_normalization": "Leading/trailing whitespace stripped from manifest and raw CSV column names.",
+  "deterministic_transformations": [
+    "Semantic feature harmonization",
+    "Header whitespace normalization",
+    "Numeric conversion",
+    "Removal of eight globally constant features",
+    "Positive infinity converted to NaN",
+    "Negative infinity converted to NaN"
+  ],
+  "learned_preprocessing_performed": false,
+  "imputation_performed": false,
+  "scaling_performed": false,
+  "partition_rows": {
+    "train": 1648724,
+    "validation": 412181,
+    "calibration": 274787,
+    "iid_test": 412181,
+    "ambiguity_stress": 82870
+  },
+  "total_missing_cells_after_inf_to_nan": 5734,
+  "output_directory": "/content/drive/MyDrive/TrustShift_IDS/data/processed/CICIDS2017_68F",
+  "runtime_seconds": 156.956068277359,
+  "next_step": "STEP_5_2_TRAIN_ONLY_IMPUTATION_AUDIT"
+}

@@ -1,0 +1,23 @@
+{
+  "step": "12.3E",
+  "shift": "S2 strict LOAO unseen attack",
+  "held_out_families": [
+    "DDoS",
+    "DoS",
+    "Brute Force",
+    "Botnet",
+    "Web Attack"
+  ],
+  "evaluation_source": "CICIDS2017 frozen IID test",
+  "first_LOAO_IID_access": "Step 12.3E",
+  "unseen_family_definition": "family completely absent from train, validation, and calibration",
+  "binary_evaluation": "held-out attack remains positive Attack class",
+  "multiclass_evaluation": "held-out family absent from output space; report known-class assignment and uncertainty, not artificial closed-set accuracy",
+  "risk_score": "1 - calibrated maximum probability",
+  "known_reference": "remaining frozen IID rows for each LOAO experiment",
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_data_accessed": false,
+  "status": "locked_unseen_evaluation_complete_awaiting_review"
+}

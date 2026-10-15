@@ -1,0 +1,44 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_5_COMPLETE",
+  "status": "FROZEN",
+  "created_utc": "2026-09-20T10:06:38.512559+00:00",
+  "source_dataset": "CICIDS2017",
+  "split_sha256": "62e60eb56510e46776170786892d7fdb8598f0d1646c964849c2e26dd1de1408",
+  "rows": {
+    "train": 1648724,
+    "validation": 412181,
+    "calibration": 274787,
+    "iid_test": 412181,
+    "ambiguity_stress": 82870,
+    "clean_total": 2747873,
+    "overall_total": 2830743
+  },
+  "features": {
+    "total": 68,
+    "continuous": 56,
+    "binary": 10,
+    "sentinel": 2
+  },
+  "sentinel_features": [
+    "F65",
+    "F66"
+  ],
+  "representations": {
+    "raw_imputed": "data/processed/CICIDS2017_68F_imputed",
+    "neural": "data/processed/CICIDS2017_68F_neural"
+  },
+  "integrity": {
+    "row_accounting_verified": true,
+    "feature_schema_verified": true,
+    "all_values_finite": true,
+    "binary_exact_preservation": true,
+    "sentinel_exact_preservation": true,
+    "continuous_reconstruction_verified": true,
+    "continuous_reconstruction_mismatch_cells": 0,
+    "train_standardization_verified": true
+  },
+  "preprocessing_refitted_in_step_5_6": false,
+  "datasets_modified_in_step_5_6": false,
+  "next_step": "STEP_6_BASELINE_MODELING"
+}

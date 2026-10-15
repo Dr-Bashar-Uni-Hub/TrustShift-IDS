@@ -1,0 +1,106 @@
+{
+  "step": "10R",
+  "status": "corrected_after_group_aware_step9R",
+  "source": "corrected group-disjoint Step-9R calibration holdout",
+  "binary_selected_risk_method": "confidence_only",
+  "multiclass_selected_risk_method": "confidence_only",
+  "primary_risk_method": "confidence_only",
+  "risk_score_definition": "1 - calibrated maximum class probability for confidence_only",
+  "risk_budgets": {
+    "binary": {
+      "0.0100": {
+        "risk_budget": 0.01,
+        "risk_threshold": 0.49778103828430176,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 65,
+        "calibration_selective_risk": 0.0004624096522679415,
+        "budget_satisfied": true
+      },
+      "0.0250": {
+        "risk_budget": 0.025,
+        "risk_threshold": 0.49778103828430176,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 65,
+        "calibration_selective_risk": 0.0004624096522679415,
+        "budget_satisfied": true
+      },
+      "0.0500": {
+        "risk_budget": 0.05,
+        "risk_threshold": 0.49778103828430176,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 65,
+        "calibration_selective_risk": 0.0004624096522679415,
+        "budget_satisfied": true
+      },
+      "0.1000": {
+        "risk_budget": 0.1,
+        "risk_threshold": 0.49778103828430176,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 65,
+        "calibration_selective_risk": 0.0004624096522679415,
+        "budget_satisfied": true
+      }
+    },
+    "multiclass": {
+      "0.0100": {
+        "risk_budget": 0.01,
+        "risk_threshold": 0.49221134185791016,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 77,
+        "calibration_selective_risk": 0.0005983928876731065,
+        "budget_satisfied": true
+      },
+      "0.0250": {
+        "risk_budget": 0.025,
+        "risk_threshold": 0.49221134185791016,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 77,
+        "calibration_selective_risk": 0.0005983928876731065,
+        "budget_satisfied": true
+      },
+      "0.0500": {
+        "risk_budget": 0.05,
+        "risk_threshold": 0.49221134185791016,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 77,
+        "calibration_selective_risk": 0.0005983928876731065,
+        "budget_satisfied": true
+      },
+      "0.1000": {
+        "risk_budget": 0.1,
+        "risk_threshold": 0.49221134185791016,
+        "calibration_coverage": 1.0,
+        "calibration_abstention_rate": 0.0,
+        "calibration_accepted_errors": 77,
+        "calibration_selective_risk": 0.0005983928876731065,
+        "budget_satisfied": true
+      }
+    }
+  },
+  "risk_budget_values": [
+    0.01,
+    0.025,
+    0.05,
+    0.1
+  ],
+  "operating_point_rule": "maximum empirical calibration-holdout coverage with selective risk <= epsilon",
+  "tie_application_rule": "deployment accepts samples with risk_score <= frozen risk_threshold",
+  "selection_source": "metadata/TrustShift_IDS_STEP_9_RISK_ESTIMATOR_SELECTION.json",
+  "group_disjoint_calibration_holdout": true,
+  "group_key": "feature_hash",
+  "group_overlap": 0,
+  "ids_model_retrained": false,
+  "temperature_refitted": false,
+  "risk_estimator_refitted_in_step10": false,
+  "iid_used": false,
+  "ambiguity_stress_used": false,
+  "external_shift_data_used": false,
+  "supersedes": "original Step-10 policy derived from superseded row-level Step-9 split"
+}

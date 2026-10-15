@@ -1,0 +1,17 @@
+{
+  "step": "12.8",
+  "status": "complete_awaiting_review",
+  "conditions": 2,
+  "base_population": "CSE-CIC-IDS2018 natural",
+  "compound": "S1 + S3 + S4-important",
+  "severities": [
+    0.1,
+    0.3
+  ],
+  "rows_per_condition": 16232943,
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "adaptive_selection": false,
+  "elapsed_seconds": 813.4568586349487
+}

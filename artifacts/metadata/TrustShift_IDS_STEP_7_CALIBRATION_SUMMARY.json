@@ -1,0 +1,33 @@
+{
+  "step": "7",
+  "model": "XGBoost",
+  "seed": 42,
+  "calibration_method": "scalar_temperature_scaling",
+  "calibration_rows": 274787,
+  "binary_temperature": 0.9744155346869672,
+  "multiclass_temperature": 1.1709901909513676,
+  "binary": {
+    "pre_nll": 0.001507441871456874,
+    "post_nll": 0.0015063058999436,
+    "pre_brier": 0.0003972612794663505,
+    "post_brier": 0.00039696811937965334,
+    "pre_ece_15": 0.00013395053191872765,
+    "post_ece_15": 0.00013824605737135364,
+    "pre_mce_15": 0.24828165420509712,
+    "post_mce_15": 0.23732750830975413
+  },
+  "multiclass": {
+    "pre_nll": 0.0019239187001554058,
+    "post_nll": 0.0018702244889216254,
+    "pre_brier": 0.000919595222608188,
+    "post_brier": 0.000916048463311185,
+    "pre_ece_15": 0.00020682462013245758,
+    "post_ece_15": 0.00017820366002759583,
+    "pre_mce_15": 0.17393892328509225,
+    "post_mce_15": 0.16239221548030225
+  },
+  "argmax_preserved": true,
+  "iid_test_accessed": false,
+  "ambiguity_stress_accessed": false,
+  "shift_data_accessed": false
+}

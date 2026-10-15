@@ -1,0 +1,22 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_5_3_COMPLETE",
+  "created_utc": "2026-09-20T10:02:36.015847+00:00",
+  "model_features": 68,
+  "imputation": {
+    "method": "median",
+    "fit_partition": "train",
+    "F14": 4143.112574999999,
+    "F15": 87.06251088,
+    "missing_indicators": false,
+    "total_cells_imputed": 5734,
+    "total_rows_affected": 2867
+  },
+  "post_imputation": {
+    "remaining_nan": 0,
+    "remaining_inf": 0,
+    "remaining_nonfinite": 0
+  },
+  "scaling_performed": false,
+  "next_step": "STEP_5_4_TRAINING_ONLY_SCALING_AUDIT"
+}

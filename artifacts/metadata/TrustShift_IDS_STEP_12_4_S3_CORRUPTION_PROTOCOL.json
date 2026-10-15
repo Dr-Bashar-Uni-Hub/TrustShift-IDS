@@ -1,0 +1,45 @@
+{
+  "step": "12.4",
+  "shift": "S3 controlled feature corruption",
+  "reference_population": "frozen clean CICIDS2017 IID test",
+  "corruption_type": "independent random feature-cell corruption",
+  "corruption_mechanism": "For each severity and each row, exactly round(severity * 68) feature positions are selected without replacement and replaced with the corresponding frozen training median.",
+  "severity_definition": "fraction of 68 feature positions corrupted per row",
+  "severities": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "independent_from_clean_reference": true,
+  "cumulative_corruption": false,
+  "replacement_values": "frozen full-training feature medians computed from clean training data only",
+  "models": "frozen primary XGBoost binary and multiclass",
+  "binary_temperature": 0.9744155346869672,
+  "multiclass_temperature": 1.1709901909513676,
+  "selection_method": "confidence_only",
+  "risk_score": "1 - calibrated maximum probability",
+  "binary_frozen_threshold": 0.49778103828430176,
+  "multiclass_frozen_threshold": 0.49221134185791016,
+  "fixed_coverages": [
+    0.5,
+    0.75,
+    0.9,
+    0.95,
+    0.975,
+    0.99,
+    0.995,
+    1.0
+  ],
+  "risk_budgets": [
+    0.01,
+    0.025,
+    0.05,
+    0.1
+  ],
+  "seed": 42,
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_data_access": false
+}

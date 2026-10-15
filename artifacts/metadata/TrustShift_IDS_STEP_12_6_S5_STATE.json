@@ -1,0 +1,24 @@
+{
+  "step": "12.6",
+  "shift": "S5 class-prior shift",
+  "status": "complete_awaiting_review",
+  "reference_rows": 412181,
+  "features": 68,
+  "scenario_names": [
+    "original",
+    "attack_enriched",
+    "balanced_major",
+    "minority_enriched",
+    "benign_dominant"
+  ],
+  "construction": "deterministic subsampling without replacement",
+  "duplicates": false,
+  "oversampling": false,
+  "synthetic_samples": false,
+  "feature_modification": false,
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_data_access": false,
+  "elapsed_seconds": 21.477604627609253
+}

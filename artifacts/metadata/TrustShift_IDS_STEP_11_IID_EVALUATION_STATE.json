@@ -1,0 +1,22 @@
+{
+  "step": "11R",
+  "status": "locked_post_correction_iid_evaluation",
+  "iid_history": "IID results had already been observed before the Step-9 group-split correction.",
+  "correction_reason": "Enforce the pre-existing feature_hash group-disjoint leakage policy.",
+  "correction_triggered_by_iid_performance": false,
+  "iid_predictive_inference_repeated": false,
+  "iid_predictive_results_preserved": true,
+  "iid_selective_results_regenerated": true,
+  "selected_binary_risk_method": "confidence_only",
+  "selected_multiclass_risk_method": "confidence_only",
+  "binary_frozen_threshold": 0.49778103828430176,
+  "multiclass_frozen_threshold": 0.49221134185791016,
+  "iid_used_for_model_selection": false,
+  "iid_used_for_risk_method_selection": false,
+  "iid_used_for_threshold_selection": false,
+  "ids_hyperparameters_changed": false,
+  "temperature_changed": false,
+  "risk_features_changed": false,
+  "risk_selection_rule_changed": false,
+  "next_stage": "Step 12 distribution-shift evaluation"
+}

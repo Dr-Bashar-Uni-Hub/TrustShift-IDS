@@ -1,0 +1,39 @@
+{
+  "step": "9R",
+  "status": "corrected_group_aware",
+  "source": "Step-8 frozen calibration trust evidence",
+  "split": "task-specific deterministic StratifiedGroupKFold 2-fold split",
+  "group_key": "feature_hash",
+  "seed": 42,
+  "risk_features": [
+    "inverse_confidence",
+    "inverse_margin",
+    "normalized_entropy",
+    "mean_leaf_surprisal",
+    "p95_leaf_surprisal",
+    "max_leaf_surprisal",
+    "log1p_min_leaf_train_count",
+    "log1p_median_leaf_train_count"
+  ],
+  "excluded_feature": "leaf_novelty_fraction",
+  "excluded_feature_reason": "constant zero on calibration; retained only as later shift diagnostic",
+  "fused_estimator": {
+    "scaler": "StandardScaler",
+    "model": "LogisticRegression",
+    "penalty": "l2",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "liblinear",
+    "max_iter": 5000,
+    "random_state": 42
+  },
+  "baseline_risk": "1 - calibrated_confidence",
+  "selection_metric": "holdout error AUPRC",
+  "selection_rule": "fused iff fused AUPRC >= confidence-only AUPRC",
+  "ids_model_retrained": false,
+  "temperature_refitted": false,
+  "iid_used": false,
+  "ambiguity_stress_used": false,
+  "external_shift_data_used": false,
+  "supersedes": "original row-level Step 9"
+}

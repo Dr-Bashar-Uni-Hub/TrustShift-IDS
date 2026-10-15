@@ -1,0 +1,25 @@
+{
+  "step": "6.4",
+  "seed": 42,
+  "selection_partition": "validation",
+  "primary_selection_metric": "macro_f1",
+  "tie_break_order": [
+    "balanced_accuracy",
+    "weighted_f1",
+    "accuracy"
+  ],
+  "binary_primary_model": "XGBoost",
+  "binary_primary_validation_macro_f1": 0.9989113313381623,
+  "multiclass_primary_model": "XGBoost",
+  "multiclass_primary_validation_macro_f1": 0.9341000166147483,
+  "all_models_preserved_for_shift_analysis": [
+    "RandomForest",
+    "XGBoost",
+    "MLP",
+    "FTTransformer"
+  ],
+  "calibration_accessed": false,
+  "iid_test_accessed": false,
+  "ambiguity_stress_accessed": false,
+  "selection_interpretation": "Primary models selected from validation Macro-F1 only. Selection does not imply superiority on IID test or distribution-shift evaluations."
+}

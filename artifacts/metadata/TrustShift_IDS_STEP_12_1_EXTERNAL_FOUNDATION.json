@@ -1,0 +1,68 @@
+{
+  "step": "12.1",
+  "status": "completed_awaiting_assistant_freeze",
+  "source_dataset": "CSE-CIC-IDS2018",
+  "raw_csv_files": 10,
+  "total_input_rows": 16233002,
+  "literal_label_rows_removed": 59,
+  "valid_rows": 16232943,
+  "feature_count": 68,
+  "feature_manifest": "metadata/TrustShift_IDS_68_feature_manifest.csv",
+  "semantic_mapping_source": "metadata/TrustShift_IDS_68_feature_manifest.csv",
+  "imputation_policy": "metadata/TrustShift_IDS_FROZEN_IMPUTATION_POLICY.json",
+  "frozen_imputation": {
+    "fit_dataset": "CICIDS2017",
+    "fit_partition": "train",
+    "method": "median",
+    "F14_Flow_Bytes_per_s": 4143.112574999999,
+    "F15_Flow_Packets_per_s": 87.06251088,
+    "external_refit": false
+  },
+  "external_nonfinite_audit": {
+    "positive_inf_before": 131799,
+    "negative_inf_before": 0,
+    "nan_before": 59721,
+    "imputed_cells": 191520,
+    "nonfinite_after": 0
+  },
+  "binary_distribution": {
+    "Benign": 13484708,
+    "Attack": 2748235
+  },
+  "canonical_family_order": {
+    "Benign": 0,
+    "DDoS": 1,
+    "DoS": 2,
+    "Brute Force": 3,
+    "Web Attack": 4,
+    "Botnet": 5,
+    "Infiltration": 6,
+    "Port Scan": 7,
+    "Heartbleed": 8
+  },
+  "historical_76F_overlap_audit": {
+    "shared_unique_vectors": 2787,
+    "external_rows_with_shared_vector": 65365,
+    "status": "preserved historical audit; not canonical for Step 12 FINAL-68F sensitivity"
+  },
+  "canonical_final68_overlap_audit": {
+    "hash_definition": "68 final features, canonical order, numeric values normalized to float64 before pandas uint64 hashing",
+    "source_rows": 2830743,
+    "source_unique_vectors": 2233691,
+    "external_rows": 16232943,
+    "external_unique_vectors": 10800329,
+    "shared_unique_vectors": 3763,
+    "external_rows_with_shared_vector": 154018,
+    "external_overlap_fraction": 0.009487989947355818
+  },
+  "primary_S1_dataset": "natural CSE-CIC-IDS2018 external distribution",
+  "S1_overlap_sensitivity": "exclude external rows whose FINAL-68F hash occurs in CICIDS2017",
+  "external_fit_performed": false,
+  "external_scaler_fit": false,
+  "external_imputation_fit": false,
+  "model_inference_performed": false,
+  "performance_evaluation_performed": false,
+  "calibration_refit_performed": false,
+  "threshold_tuning_performed": false,
+  "next_step": "12.2 S1 external domain/temporal shift evaluation"
+}

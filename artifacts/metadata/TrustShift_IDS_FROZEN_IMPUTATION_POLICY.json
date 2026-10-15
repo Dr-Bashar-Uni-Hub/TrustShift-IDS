@@ -1,0 +1,22 @@
+{
+  "method": "median",
+  "fit_partition": "train",
+  "features_imputed": [
+    "F14",
+    "F15"
+  ],
+  "values": {
+    "F14": 4143.112574999999,
+    "F15": 87.06251088
+  },
+  "missing_indicators_added": false,
+  "model_feature_count_after_imputation": 68,
+  "applied_unchanged_to": [
+    "train",
+    "validation",
+    "calibration",
+    "iid_test",
+    "ambiguity_stress",
+    "future_CSE_CIC_IDS2018"
+  ]
+}

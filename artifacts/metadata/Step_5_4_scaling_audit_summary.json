@@ -1,0 +1,16 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_5_4_SCALING_AUDIT_COMPLETE",
+  "fit_population": "CICIDS2017 training partition only",
+  "training_rows": 1648724,
+  "features": 68,
+  "features_with_negative_values": 12,
+  "features_with_zero_iqr": 16,
+  "low_cardinality_features_le20": 10,
+  "features_abs_skew_gt5": 40,
+  "features_abs_skew_gt20": 23,
+  "features_zero_pct_ge90": 10,
+  "features_range_expansion_ge100": 14,
+  "scaling_applied": false,
+  "decision": "PENDING_REVIEW"
+}

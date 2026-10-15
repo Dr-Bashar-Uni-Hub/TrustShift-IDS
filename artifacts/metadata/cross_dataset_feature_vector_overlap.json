@@ -1,0 +1,10 @@
+{
+  "shared_unique_feature_vectors": 2787,
+  "cicids2017_rows_in_shared_vectors": 12546,
+  "cse_cic_ids2018_rows_in_shared_vectors": 65365,
+  "cicids2017_shared_vector_pct": 0.44320519383073637,
+  "cse_cic_ids2018_shared_vector_pct": 0.40266881981905567,
+  "same_family_shared_vectors": 1284,
+  "different_family_shared_vectors": 188,
+  "ambiguous_shared_vectors": 1315
+}

@@ -1,0 +1,26 @@
+{
+  "step": "12.5",
+  "shift": "S4 missing-feature shift",
+  "status": "complete_awaiting_review",
+  "clean_rows": 412181,
+  "features": 68,
+  "branches": [
+    "random",
+    "important"
+  ],
+  "severities": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "generation": "independent from clean IID",
+  "missing_representation": "frozen training median",
+  "important_feature_ranking": "mean normalized feature_importances_ from frozen binary and multiclass XGBoost models",
+  "iid_used_for_feature_ranking": false,
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_data_access": false,
+  "elapsed_seconds": 76.79668092727661
+}

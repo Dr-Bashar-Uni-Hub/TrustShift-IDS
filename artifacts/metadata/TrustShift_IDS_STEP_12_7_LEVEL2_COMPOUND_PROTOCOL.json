@@ -1,0 +1,35 @@
+{
+  "step": "12.7",
+  "type": "Level-2 compound distribution shifts",
+  "severity_levels": [
+    0.1,
+    0.3
+  ],
+  "nominal_to_exact_feature_counts": {
+    "0.10": 7,
+    "0.30": 20
+  },
+  "compounds": [
+    "S1+S3 external corruption 10%",
+    "S1+S3 external corruption 30%",
+    "S1+S4 external important missingness 10%",
+    "S1+S4 external important missingness 30%",
+    "S3+S4 source IID 10%",
+    "S3+S4 source IID 30%",
+    "S3+S5 attack-enriched 10%",
+    "S3+S5 attack-enriched 30%",
+    "S4+S5 attack-enriched 10%",
+    "S4+S5 attack-enriched 30%"
+  ],
+  "S3_definition": "exactly k distinct feature positions per row replaced with training-derived medians; independently generated for each compound condition",
+  "S4_definition": "top-k important features globally replaced with training-derived medians; ranking restored from frozen Step 12.5",
+  "S5_definition": "frozen attack-enriched Step 12.6 population; no balanced-major/minority-enriched compounds because those sensitivity populations are sample-size limited",
+  "S1_definition": "natural CSE-CIC-IDS2018 external population",
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "adaptive_compound_selection": false,
+  "adaptive_severity_selection": false,
+  "seed": 42,
+  "interaction_analysis": "compound degradation compared descriptively with individual-shift degradation; no sign assumed a priori"
+}

@@ -1,0 +1,18 @@
+{
+  "project": "TrustShift-IDS",
+  "final_step": "12.9",
+  "implementation_status": "COMPLETE_AWAITING_FINAL_REVIEW",
+  "new_training_in_step_12_9": false,
+  "new_inference_in_step_12_9": false,
+  "new_shift_generation_in_step_12_9": false,
+  "primary_model": "XGBoost",
+  "primary_selective_policy": "calibrated confidence-only",
+  "hypothesis_status": {
+    "H1": "SUPPORTED_WITH_QUALIFICATION",
+    "H2": "SUPPORTED_WITH_QUALIFICATION",
+    "H3": "SUPPORTED",
+    "H4": "NOT_SUPPORTED"
+  },
+  "canonical_step12_8_sha256": "588f571d0b987240d1340137983dac399f3c3111641427c090cb18938221e39e",
+  "elapsed_seconds": 0.3313586711883545
+}

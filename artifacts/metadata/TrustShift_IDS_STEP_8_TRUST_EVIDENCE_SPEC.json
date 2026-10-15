@@ -1,0 +1,32 @@
+{
+  "step": "8",
+  "model": "XGBoost",
+  "seed": 42,
+  "probability_source": "Step 7 scalar-temperature calibrated probabilities",
+  "confidence_evidence": [
+    "calibrated_confidence",
+    "probability_margin"
+  ],
+  "predictive_uncertainty_evidence": [
+    "normalized_entropy"
+  ],
+  "ood_evidence_method": "XGBoost training-leaf occupancy novelty",
+  "ood_reference_partition": "CICIDS2017 train only",
+  "ood_evidence": [
+    "leaf_novelty_fraction",
+    "mean_leaf_surprisal",
+    "p95_leaf_surprisal",
+    "max_leaf_surprisal",
+    "min_leaf_train_count",
+    "median_leaf_train_count"
+  ],
+  "leaf_probability_smoothing_alpha": 1.0,
+  "leaf_surprisal_definition": "-log((train_leaf_count + 1) / (N_train + 1))",
+  "calibration_partition_role": "Trust-evidence construction and later risk-estimator development only",
+  "prediction_error_definition": "1 if calibrated argmax prediction != true label else 0",
+  "trust_estimator_fitted_in_step_8": false,
+  "iid_test_accessed": false,
+  "ambiguity_stress_accessed": false,
+  "external_shift_data_accessed": false,
+  "model_retrained": false
+}

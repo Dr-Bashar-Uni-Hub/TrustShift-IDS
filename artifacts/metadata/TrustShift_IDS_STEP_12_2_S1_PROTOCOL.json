@@ -1,0 +1,54 @@
+{
+  "shift_id": "S1",
+  "shift_name": "external_domain_temporal_shift",
+  "source_dataset": "CICIDS2017",
+  "external_dataset": "CSE-CIC-IDS2018",
+  "primary_external_evaluation": "natural external distribution",
+  "sensitivity_external_evaluation": "FINAL-68F source-overlap-purged external distribution",
+  "models": [
+    "XGBoost_binary",
+    "XGBoost_multiclass"
+  ],
+  "probability_calibration": "frozen scalar temperature scaling from CICIDS2017 calibration",
+  "risk_score": "1 - calibrated maximum class probability",
+  "selective_policy": "frozen confidence-only policy from Step 10R",
+  "threshold_refitting_on_external": false,
+  "temperature_refitting_on_external": false,
+  "model_refitting_on_external": false,
+  "feature_preprocessing_refitting_on_external": false,
+  "primary_metrics": [
+    "accuracy",
+    "balanced_accuracy",
+    "macro_f1",
+    "weighted_f1",
+    "log_loss",
+    "Brier",
+    "ECE15",
+    "MCE15",
+    "AURC",
+    "excess_AURC",
+    "risk_at_fixed_coverage",
+    "frozen_threshold_coverage",
+    "frozen_threshold_selective_risk",
+    "class_conditional_coverage",
+    "class_conditional_selective_risk"
+  ],
+  "fixed_coverages": [
+    0.5,
+    0.75,
+    0.9,
+    0.95,
+    0.975,
+    0.99,
+    0.995,
+    1.0
+  ],
+  "risk_budgets": [
+    0.01,
+    0.025,
+    0.05,
+    0.1
+  ],
+  "external_labels_used_for": "evaluation only",
+  "external_results_used_for_tuning": false
+}

@@ -1,0 +1,24 @@
+{
+  "step": "12.4",
+  "shift": "S3 controlled feature corruption",
+  "status": "complete_awaiting_review",
+  "clean_rows": 412181,
+  "features": 68,
+  "severities": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "generation": "independent from clean IID",
+  "corruption": "exact per-row feature masking to frozen TRAIN median",
+  "binary_temperature": 0.9744155346869672,
+  "multiclass_temperature": 1.1709901909513676,
+  "binary_threshold": 0.49778103828430176,
+  "multiclass_threshold": 0.49221134185791016,
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_data_access": false,
+  "elapsed_seconds": 45.96816682815552
+}

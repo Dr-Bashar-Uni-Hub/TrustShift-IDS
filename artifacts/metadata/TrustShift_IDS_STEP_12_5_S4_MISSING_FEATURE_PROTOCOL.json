@@ -1,0 +1,39 @@
+{
+  "step": "12.5",
+  "shift": "S4 missing-feature shift",
+  "reference_population": "frozen clean CICIDS2017 IID test",
+  "branches": [
+    "random_feature_missingness",
+    "important_feature_missingness"
+  ],
+  "severities": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "severity_definition": "fraction of 68 features unavailable per observation",
+  "operational_missing_value_representation": "unavailable feature replaced by its frozen training-derived median before frozen-model inference",
+  "random_branch": "exactly round(severity*68) distinct feature positions selected independently for every row",
+  "important_branch": "top round(severity*68) features globally masked in every row; ranking derived only from frozen XGBoost model feature_importances_",
+  "important_feature_ranking": "mean normalized frozen-model importance across binary and multiclass XGBoost models",
+  "iid_used_for_feature_ranking": false,
+  "independent_from_clean_reference": true,
+  "cumulative_missingness": false,
+  "models": "frozen primary XGBoost",
+  "temperatures": {
+    "binary": 0.9744155346869672,
+    "multiclass": 1.1709901909513676
+  },
+  "frozen_thresholds": {
+    "binary": 0.49778103828430176,
+    "multiclass": 0.49221134185791016
+  },
+  "selection_method": "confidence_only",
+  "risk_score": "1 - calibrated maximum probability",
+  "seed": 42,
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_data_access": false
+}

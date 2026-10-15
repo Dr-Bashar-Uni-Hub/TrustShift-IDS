@@ -1,0 +1,109 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_6_1_COMPLETE",
+  "status": "COMPLETE",
+  "created_utc": "2026-09-20T10:06:45.749375+00:00",
+  "source_dataset": "CICIDS2017",
+  "split_sha256": "62e60eb56510e46776170786892d7fdb8598f0d1646c964849c2e26dd1de1408",
+  "feature_count": 68,
+  "family_target_column": "attack_family",
+  "persisted_binary_target_column": "binary_label",
+  "binary_class_to_index": {
+    "Benign": 0,
+    "Attack": 1
+  },
+  "multiclass_class_to_index": {
+    "Benign": 0,
+    "DDoS": 1,
+    "DoS": 2,
+    "Brute Force": 3,
+    "Web Attack": 4,
+    "Botnet": 5,
+    "Infiltration": 6,
+    "Port Scan": 7,
+    "Heartbleed": 8
+  },
+  "partition_roles": {
+    "train": {
+      "role": "model_fitting",
+      "allowed_for_model_fit": true,
+      "allowed_for_model_selection": false,
+      "allowed_for_calibration_fit": false,
+      "final_evaluation_only": false
+    },
+    "validation": {
+      "role": "model_development_and_selection",
+      "allowed_for_model_fit": false,
+      "allowed_for_model_selection": true,
+      "allowed_for_calibration_fit": false,
+      "final_evaluation_only": false
+    },
+    "calibration": {
+      "role": "posthoc_calibration_and_trust_estimation_only",
+      "allowed_for_model_fit": false,
+      "allowed_for_model_selection": false,
+      "allowed_for_calibration_fit": true,
+      "final_evaluation_only": false
+    },
+    "iid_test": {
+      "role": "final_iid_evaluation",
+      "allowed_for_model_fit": false,
+      "allowed_for_model_selection": false,
+      "allowed_for_calibration_fit": false,
+      "final_evaluation_only": true
+    },
+    "ambiguity_stress": {
+      "role": "ambiguity_stress_evaluation_only",
+      "allowed_for_model_fit": false,
+      "allowed_for_model_selection": false,
+      "allowed_for_calibration_fit": false,
+      "final_evaluation_only": true
+    }
+  },
+  "model_representation": {
+    "RandomForest": {
+      "representation": "raw_imputed",
+      "directory": "data/processed/CICIDS2017_68F_imputed",
+      "reason": "tree-based baseline; no neural scaling required"
+    },
+    "XGBoost": {
+      "representation": "raw_imputed",
+      "directory": "data/processed/CICIDS2017_68F_imputed",
+      "reason": "tree-based boosting baseline; no neural scaling required"
+    },
+    "MLP": {
+      "representation": "neural",
+      "directory": "data/processed/CICIDS2017_68F_neural",
+      "reason": "neural baseline uses frozen training-derived preprocessing"
+    },
+    "FTTransformer": {
+      "representation": "neural",
+      "directory": "data/processed/CICIDS2017_68F_neural",
+      "reason": "tabular neural model uses frozen training-derived preprocessing"
+    }
+  },
+  "principles": {
+    "seed": 42,
+    "tasks": [
+      "binary",
+      "multiclass"
+    ],
+    "binary_definition": "Benign=0; all canonical attack families=1",
+    "multiclass_definition": "9 canonical families",
+    "training_partition": "train",
+    "selection_partition": "validation",
+    "calibration_partition": "calibration",
+    "iid_test_partition": "iid_test",
+    "ambiguity_stress_partition": "ambiguity_stress",
+    "calibration_used_for_model_selection": false,
+    "iid_test_used_for_model_selection": false,
+    "ambiguity_stress_used_for_model_selection": false,
+    "oversampling_in_step_6_1": false,
+    "class_rebalancing_in_step_6_1": false,
+    "new_preprocessing_fit": false,
+    "feature_selection": false,
+    "data_modified": false,
+    "model_training_performed": false
+  },
+  "next_step": "STEP_6_2_BASELINE_TRAINING_PROTOCOL"
+}

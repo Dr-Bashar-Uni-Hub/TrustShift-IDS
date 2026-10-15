@@ -1,0 +1,19 @@
+{
+  "step": "12.9",
+  "purpose": "final consolidation only",
+  "new_training": false,
+  "new_inference": false,
+  "new_shift_generation": false,
+  "recalibration": false,
+  "threshold_refitting": false,
+  "adaptive_model_selection": false,
+  "hypotheses": {
+    "H1": "compound shifts disproportionately degrade calibration/selective reliability",
+    "H2": "selective prediction reduces operational risk under shift but degrades as shifts interact",
+    "H3": "aggregate selective metrics conceal poor minority/unseen reliability",
+    "H4": "fused trust score outperforms conventional confidence"
+  },
+  "H4_primary_selection_metric": "error-detection AUPRC on corrected group-aware holdout",
+  "H4_rule": "preserve Step9R predeclared selection result; no post-hoc fusion redesign",
+  "interpretation_rule": "supported / partially supported / not supported / unresolved only from frozen evidence"
+}

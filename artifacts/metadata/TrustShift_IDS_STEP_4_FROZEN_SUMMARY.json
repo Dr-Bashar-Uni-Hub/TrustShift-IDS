@@ -1,0 +1,69 @@
+{
+  "project": "TrustShift-IDS",
+  "step": "STEP_4_COMPLETE",
+  "created_utc": "2026-09-20T09:58:15.450338+00:00",
+  "seed": 42,
+  "source_dataset": "CICIDS2017",
+  "split_policy": {
+    "group_basis": "76-feature stable 64-bit hash",
+    "primary_source": "ambiguity-clean",
+    "ratios": {
+      "train": 0.6,
+      "validation": 0.15,
+      "calibration": 0.1,
+      "iid_test": 0.15
+    },
+    "same_split_binary_multiclass": true,
+    "duplicate_group_cross_partition_leakage": 0
+  },
+  "population": {
+    "raw_valid_source_rows": 2830743,
+    "ambiguity_stress_rows": 82870,
+    "clean_rows": 2747873,
+    "clean_groups": 2233419
+  },
+  "partitions": {
+    "train": {
+      "rows": 1648724,
+      "groups": 1340919,
+      "row_pct": 60.00000727835675
+    },
+    "validation": {
+      "rows": 412181,
+      "groups": 335192,
+      "row_pct": 15.000001819589187
+    },
+    "calibration": {
+      "rows": 274787,
+      "groups": 222095,
+      "row_pct": 9.999989082464873
+    },
+    "iid_test": {
+      "rows": 412181,
+      "groups": 335213,
+      "row_pct": 15.000001819589187
+    }
+  },
+  "binary_population": {
+    "Benign": 2271913,
+    "Attack": 475960
+  },
+  "canonical_families": [
+    "Benign",
+    "DDoS",
+    "DoS",
+    "Brute Force",
+    "Botnet",
+    "Infiltration",
+    "Port Scan",
+    "Web Attack",
+    "Heartbleed"
+  ],
+  "rare_class_note": {
+    "Infiltration_total": 36,
+    "Heartbleed_total": 11,
+    "interpretation": "Per-class estimates for ultra-rare families, especially Heartbleed, are descriptive and statistically unstable."
+  },
+  "split_sha256": "62e60eb56510e46776170786892d7fdb8598f0d1646c964849c2e26dd1de1408",
+  "next_step": "STEP_5_PREPROCESSING"
+}

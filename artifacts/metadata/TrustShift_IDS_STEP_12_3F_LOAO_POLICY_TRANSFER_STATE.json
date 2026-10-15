@@ -1,0 +1,22 @@
+{
+  "step": "12.3F",
+  "shift": "S2 strict LOAO",
+  "selection_method": "confidence_only",
+  "risk_score": "1 - calibrated maximum probability",
+  "risk_budgets": [
+    0.01,
+    0.025,
+    0.05,
+    0.1
+  ],
+  "threshold_source": "strict LOAO-purged calibration only",
+  "deployment_population": "full frozen CICIDS2017 IID test including held-out unseen family",
+  "binary_unseen_error_definition": "valid; held-out attacks retain binary Attack label",
+  "multiclass_unseen_error_definition": "undefined because held-out family absent from classifier output space",
+  "iid_used_for_threshold_selection": false,
+  "unseen_family_used_for_threshold_selection": false,
+  "model_refit": false,
+  "temperature_refit": false,
+  "external_data_accessed": false,
+  "status": "frozen_policy_transfer_complete_awaiting_review"
+}

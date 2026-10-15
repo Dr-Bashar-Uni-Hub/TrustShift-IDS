@@ -1,0 +1,23 @@
+{
+  "step": "12.2C",
+  "shift": "S1 external domain/temporal shift",
+  "status": "evaluation_complete_awaiting_freeze_review",
+  "primary_set": "natural_external",
+  "sensitivity_set": "overlap_purged",
+  "natural_rows": 16232943,
+  "overlap_purged_rows": 16078925,
+  "overlap_rows_removed": 154018,
+  "primary_risk_method": "confidence_only",
+  "binary_frozen_threshold": 0.49778103828430176,
+  "multiclass_frozen_threshold": 0.49221134185791016,
+  "multiclass_macro_policy": {
+    "primary_macro_f1": "fixed 9-class labels with zero_division=0",
+    "sensitivity_macro_f1": "observed-support classes only",
+    "reason": "Port Scan and Heartbleed have zero external support"
+  },
+  "coverage_at_risk": "post-hoc diagnostic only; no deployment threshold refitting",
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_results_used_for_tuning": false
+}

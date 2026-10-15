@@ -1,0 +1,15 @@
+{
+  "step": "12.7",
+  "repair": "12.7R external semantic-column loader correction",
+  "status": "complete_awaiting_review",
+  "conditions": 10,
+  "source_conditions_recomputed": false,
+  "external_conditions_completed": 4,
+  "external_feature_order_source": "metadata/TrustShift_IDS_68_feature_manifest.csv",
+  "external_feature_name_field": "cicids2017_feature",
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "adaptive_condition_selection": false,
+  "elapsed_repair_seconds": 1497.4970273971558
+}

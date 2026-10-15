@@ -1,0 +1,49 @@
+{
+  "step": "12.6",
+  "shift": "S5 class-prior shift",
+  "reference_population": "frozen clean CICIDS2017 IID test",
+  "construction": "deterministic class-specific subsampling without replacement",
+  "feature_modification": false,
+  "synthetic_samples": false,
+  "oversampling": false,
+  "duplication": false,
+  "models": "frozen primary XGBoost",
+  "temperatures": {
+    "binary": 0.9744155346869672,
+    "multiclass": 1.1709901909513676
+  },
+  "frozen_thresholds": {
+    "binary": 0.49778103828430176,
+    "multiclass": 0.49221134185791016
+  },
+  "selection_method": "confidence_only",
+  "risk_score": "1 - calibrated maximum probability",
+  "fixed_coverages": [
+    0.5,
+    0.75,
+    0.9,
+    0.95,
+    0.975,
+    0.99,
+    0.995,
+    1.0
+  ],
+  "risk_budgets": [
+    0.01,
+    0.025,
+    0.05,
+    0.1
+  ],
+  "seed": 42,
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "external_data_access": false,
+  "scenario_names": [
+    "original",
+    "attack_enriched",
+    "balanced_major",
+    "minority_enriched",
+    "benign_dominant"
+  ]
+}

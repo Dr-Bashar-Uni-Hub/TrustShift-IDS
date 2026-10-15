@@ -1,0 +1,31 @@
+{
+  "step": "12.8",
+  "name": "Level-3 compound distribution shifts",
+  "base_population": "natural CSE-CIC-IDS2018 external population",
+  "compound": [
+    "S1_external_domain_temporal",
+    "S3_random_feature_corruption",
+    "S4_important_feature_unavailability"
+  ],
+  "severity_pairs": {
+    "moderate": {
+      "S3": 0.1,
+      "S4_important": 0.1
+    },
+    "severe": {
+      "S3": 0.3,
+      "S4_important": 0.3
+    }
+  },
+  "severity_generation": "each condition independently generated from clean external shards",
+  "S3_definition": "row-specific random feature replacement using frozen training-derived medians",
+  "S4_definition": "global top-k frozen XGBoost important-feature replacement using frozen training-derived medians",
+  "overlap_rule": "S3/S4 feature overlap allowed; affected-feature union audited",
+  "feature_order_source": "metadata/TrustShift_IDS_68_feature_manifest.csv",
+  "external_semantic_field": "cicids2017_feature",
+  "model_refit": false,
+  "temperature_refit": false,
+  "threshold_refit": false,
+  "adaptive_selection": false,
+  "seed": 42
+}
