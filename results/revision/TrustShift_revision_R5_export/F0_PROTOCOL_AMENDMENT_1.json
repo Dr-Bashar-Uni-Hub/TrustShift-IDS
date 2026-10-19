@@ -1,0 +1,5 @@
+{
+  "amendment": "F3 external data contain values beyond the float32 range; for XGBoost these are saturated at +/- float32 max before conversion (decision-preserving: every learned split threshold is finite). NaN would be set to 0 and counted. MLP path unchanged.",
+  "added": "2026-10-19 13:52:07",
+  "applies_to": "F3 only (source data contained no such values)"
+}
