@@ -1,0 +1,113 @@
+{
+  "XGBoost": {
+    "T": 0.957950177070541,
+    "thresholds": {
+      "fixed": 0.49874350877864104,
+      "elevated": 0.024012795482814653,
+      "severe": 1.3558990644479962e-05,
+      "cov_0.999": 0.3322451923257892,
+      "cov_0.995": 0.07215070986240169,
+      "cov_0.990": 0.024012795482814653,
+      "cov_0.980": 1.3558990644479962e-05,
+      "cov_0.975": 1.3558990644479962e-05,
+      "cov_0.950": 1.3558990644479962e-05,
+      "cov_0.925": 1.3558990644479962e-05,
+      "cov_0.900": 1.3558990644479962e-05,
+      "cov_0.850": 1.3558990644479962e-05,
+      "cov_0.800": 1.3558990644479962e-05,
+      "cov_0.750": 1.3558990644479962e-05,
+      "cov_0.700": 1.3558990644479962e-05,
+      "cov_0.600": 1.3558990644479962e-05,
+      "cov_0.500": 1.1203728584097128e-05
+    },
+    "atc_conf_threshold": 0.6966655546445124,
+    "atc_bounds": [
+      0.0022,
+      0.0023840000000000003
+    ],
+    "conf_bounds": [
+      0.001796766188406268,
+      0.0018500563463266036
+    ],
+    "null_windows": 109,
+    "cal_error_rate": 0.0013257312550743507,
+    "test_accuracy": 0.9974569676741919,
+    "test_attack_recall": 0.9744770677413165,
+    "test_errors": 1085
+  },
+  "MLP": {
+    "T": 1.010566988340823,
+    "thresholds": {
+      "fixed": 0.4994099501773823,
+      "elevated": 0.03041760809985694,
+      "severe": 1.2816733905962607e-05,
+      "cov_0.999": 0.3669384980893643,
+      "cov_0.995": 0.13385377992933312,
+      "cov_0.990": 0.03041760809985694,
+      "cov_0.980": 0.0005328135073910945,
+      "cov_0.975": 0.0005328135073910945,
+      "cov_0.950": 0.0005328135073910945,
+      "cov_0.925": 0.0005328135073910945,
+      "cov_0.900": 1.2816733905962607e-05,
+      "cov_0.850": 1.2816733905962607e-05,
+      "cov_0.800": 1.2816733905962607e-05,
+      "cov_0.750": 1.2816733905962607e-05,
+      "cov_0.700": 1.2816733905962607e-05,
+      "cov_0.600": 1.2816733905962607e-05,
+      "cov_0.500": 1.2816733905962607e-05
+    },
+    "atc_conf_threshold": 0.6757311597503304,
+    "atc_bounds": [
+      0.0028,
+      0.0033840000000000003
+    ],
+    "conf_bounds": [
+      0.0023228234940144243,
+      0.0025365884427336243
+    ],
+    "null_windows": 109,
+    "cal_error_rate": 0.0017060789806680953,
+    "test_accuracy": 0.99678195079877,
+    "test_attack_recall": 0.9727499520245634,
+    "test_errors": 1373
+  },
+  "importance_order": [
+    "MIN_TTL",
+    "TCP_WIN_MAX_IN",
+    "RETRANSMITTED_OUT_PKTS",
+    "RETRANSMITTED_OUT_BYTES",
+    "TCP_FLAGS",
+    "SRC_TO_DST_SECOND_BYTES",
+    "LONGEST_FLOW_PKT",
+    "IN_BYTES",
+    "OUT_BYTES",
+    "SERVER_TCP_FLAGS",
+    "L7_PROTO",
+    "DURATION_OUT",
+    "CLIENT_TCP_FLAGS",
+    "DST_TO_SRC_SECOND_BYTES",
+    "PROTOCOL",
+    "FLOW_DURATION_MILLISECONDS",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "ICMP_IPV4_TYPE",
+    "IN_PKTS",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "RETRANSMITTED_IN_BYTES",
+    "MAX_TTL",
+    "DNS_QUERY_TYPE",
+    "NUM_PKTS_1024_TO_1514_BYTES",
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    "OUT_PKTS",
+    "ICMP_TYPE",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "SHORTEST_FLOW_PKT",
+    "RETRANSMITTED_IN_PKTS",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "MIN_IP_PKT_LEN",
+    "TCP_WIN_MAX_OUT",
+    "DURATION_IN",
+    "FTP_COMMAND_RET_CODE",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "DNS_TTL_ANSWER"
+  ]
+}

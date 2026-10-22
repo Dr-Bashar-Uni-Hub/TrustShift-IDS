@@ -1,0 +1,28 @@
+{
+  "created": "2026-10-22 12:26:07 UTC",
+  "status": "Written before computing any asymmetric-policy or metric result on any dataset.",
+  "metric": {
+    "name": "Budget-compliant detection rate (BCDR)",
+    "definition": "Share of all attack flows that are correctly detected (accepted and predicted attack) in windows whose selective risk is at or below the 1% budget. Detections in violating windows count as zero, because their decisions cannot be trusted; deferred attacks count as zero, because they receive no automatic decision.",
+    "reported_with": [
+      "violating windows",
+      "overall coverage",
+      "attack deferral",
+      "false-alarm rate among accepted benign flows"
+    ]
+  },
+  "policies": {
+    "SYM(t)": "Existing symmetric policy: accept any decision with risk score <= t.",
+    "ASY(t)": "Asymmetric policy: always accept 'attack' verdicts (they become analyst-reviewed alerts); accept 'benign' verdicts only if risk score <= t; defer the remaining benign verdicts.",
+    "thresholds": "t in {Elevated, Severe} state thresholds of each detector, set from calibration data only; plus the monitor-adaptive variant in which the state (TrustShift states for CICIDS2017 XGBoost and neural detectors, ATC for NetFlow) chooses t per window."
+  },
+  "datasets": {
+    "existing": [
+      "CICIDS2017 deployment sequences and CSE-CIC-IDS2018 (XGBoost, MLP, FT-Transformer)",
+      "NF-UNSW-NB15-v2 sequences and NF-CSE-CIC-IDS2018-v2 (XGBoost, MLP)"
+    ],
+    "confirmation": "NF-ToN-IoT-v2 as an untouched external test for the NF-UNSW-NB15-v2 detectors; evaluated only after this protocol and the existing-data results are fixed."
+  },
+  "decision_rule": "The remedy is judged useful if, on the untouched confirmation test, ASY raises BCDR over the best symmetric policy for both detectors without increasing violating windows. Any other outcome is reported as a negative result.",
+  "computation": "For each window, ASY counts are derived from the fixed (accept-all) record for attack verdicts and from the threshold-t record for benign verdicts."
+}

@@ -25,7 +25,7 @@ box(84,30,15,11,'Metrics:\nviolations,\ncoverage,\nmissed attacks,\ndeferral','#
 arr(80,37.5,84,36)
 for x in [12,37,62,87]: arr(x,17.4,50,29.5) if False else None
 ax.annotate('',xy=(50,29.6),xytext=(50,18),arrowprops=dict(arrowstyle='->',lw=0.9,color='#333'))
-plt.savefig(O+'Figure_1.png',dpi=300,bbox_inches='tight'); plt.close()
+plt.savefig(O+'_retired_schematic.png',dpi=300,bbox_inches='tight'); plt.close()
 # ---------- Fig 2 external shift security
 g=pd.read_csv(DERIVED/'S1_family_security.csv')
 fams=['Brute Force','DoS','Web Attack','Botnet','DDoS','Infiltration']
@@ -42,7 +42,7 @@ for a in axs: a.set_xticks(x); a.set_xticklabels(fams,rotation=30,ha='right',fon
 axs[1].axhline(1,ls=':',c='k',lw=0.8); axs[1].text(5.4,2,'1% budget',fontsize=7,ha='right')
 axs[0].legend(fontsize=7,frameon=False,loc='upper right'); axs[0].set_title('(a) Deferral by attack family',fontsize=9); axs[1].set_title('(b) Risk on accepted traffic',fontsize=9)
 fig.text(0.5,-0.04,'Share of all attack flows correctly detected: 0.0–2.1% (fixed) and 0% (Severe) in every family.',ha='center',fontsize=7.5)
-plt.tight_layout(); plt.savefig(O+'Figure_2.png',dpi=300,bbox_inches='tight'); plt.close()
+plt.tight_layout(); plt.savefig(O+'Figure_4.png',dpi=300,bbox_inches='tight'); plt.close()
 # ---------- Fig 3 frontier
 ms=pd.read_csv(P('R2_multiseed_window_threshold_outcomes.csv.gz')); new=ms[ms.seed!=42].copy(); new['viol']=(new.acc_n>0)&(rk(new)>EPS)
 mc=pd.read_csv(DERIVED/'monitor_compare_streams.csv')
@@ -52,29 +52,50 @@ for a,t in zip(axs,['binary','multiclass']):
     s['cov']=100*s.acc/s.n; s=s.sort_values('cov')
     a.plot(s['cov'],s.v,'-o',color='#777',ms=3,lw=1,label='Static threshold (calibration grid)')
     m=mc[mc.task==t].set_index('monitor')
-    pts=[('FULL (frozen SSS)','Adaptive 3-family SSS','#c0392b','s'),('FULL lag-1','Adaptive, lag-1','#e67e22','D'),('Predictive only','Predictive-only monitor','#2471a3','^'),('ATC (task-specific)','ATC monitor','#17a589','v'),('Feature only','Feature-only monitor','#8e44ad','P'),('Static Elevated','Static Elevated','#000','x')]
+    pts=[('FULL (frozen SSS)','Adaptive (TrustShift)','#c0392b','s'),('FULL lag-1','Adaptive, lag-1','#e67e22','D'),('Predictive only','Confidence-only monitor','#2471a3','^'),('ATC (task-specific)','ATC monitor','#17a589','v'),('Feature only','Feature-only monitor','#8e44ad','P'),('Static Elevated','Static Elevated','#000','x')]
     for k,l,c,mk in pts:
         a.scatter(100*m.loc[k,'cov'],m.loc[k,'viol'],color=c,marker=mk,s=34,zorder=5,label=l)
-    a.set_title(f'({"a" if t=="binary" else "b"}) {t.capitalize()}',fontsize=9); a.set_xlabel('Overall coverage (%)'); a.set_xlim(74,101)
+    a.set_title('(a) Binary' if t=='binary' else '(b) Nine-class',fontsize=9); a.set_xlabel('Overall coverage (%)'); a.set_xlim(74,101)
 axs[0].set_ylabel('Violating windows (of 240)'); axs[1].legend(fontsize=6.5,frameon=False,loc='upper left')
-plt.tight_layout(); plt.savefig(O+'Figure_4.png',dpi=300,bbox_inches='tight'); plt.close()
+plt.tight_layout(); plt.savefig(O+'Figure_2.png',dpi=300,bbox_inches='tight'); plt.close()
 # ---------- Fig 4 stagewise
-stages=['clean_initial','S3_05','S3_10','S3_20','S3_10_PLUS_S4_10','clean_recovery']; sl=['Clean','S3-05','S3-10','S3-20','S3-10+\nS4-10','Clean\nrecovery']
+stages=['clean_initial','S3_05','S3_10','S3_20','S3_10_PLUS_S4_10','clean_recovery']; sl=['Clean','Mask\n5%','Mask\n10%','Mask\n20%','Combined\n10%','Clean\nrecovery']
 d=new[new.task=='binary']; ad=d[d.thr_name=='state_'+d.state]
 fig,axs=plt.subplots(1,2,figsize=(7.2,2.8))
-for lab_,x_,c,ls in [('Fixed',d[d.thr_name=='state_normal'],'#9e9e9e','--'),('Adaptive SSS',ad,'#c0392b','-'),('Static Elevated',d[d.thr_name=='state_elevated'],'#000',':'),('Static 97.5%',d[d.thr_name=='cov_0.975'],'#2471a3','-.')]:
+for lab_,x_,c,ls in [('Fixed',d[d.thr_name=='state_normal'],'#9e9e9e','--'),('Adaptive (TrustShift)',ad,'#c0392b','-'),('Static Elevated',d[d.thr_name=='state_elevated'],'#000',':'),('Static 97.5%',d[d.thr_name=='cov_0.975'],'#2471a3','-.')]:
     cov=[100*x_[x_.stage_name==s].acc_n.sum()/x_[x_.stage_name==s].n.sum() for s in stages]
     dfr=[100*(1-x_[x_.stage_name==s].acc_attack.sum()/x_[x_.stage_name==s].n_attack.sum()) for s in stages]
     axs[0].plot(range(6),cov,ls,marker='o',ms=3,color=c,label=lab_); axs[1].plot(range(6),dfr,ls,marker='o',ms=3,color=c)
 for a in axs: a.set_xticks(range(6)); a.set_xticklabels(sl,fontsize=7)
 axs[0].set_ylabel('Coverage (%)'); axs[1].set_ylabel('Attack flows deferred (%)'); axs[0].legend(fontsize=7,frameon=False)
 axs[0].set_title('(a) Coverage by stage',fontsize=9); axs[1].set_title('(b) Attack deferral by stage',fontsize=9)
-plt.tight_layout(); plt.savefig(O+'Figure_5.png',dpi=300,bbox_inches='tight'); plt.close()
+plt.tight_layout(); plt.savefig(O+'Figure_3.png',dpi=300,bbox_inches='tight'); plt.close()
 # ---------- Fig 5 LOAO
 L=pd.read_csv(P('Step_12_3E_LOAO_unseen_fixed_coverage.csv')); L=L[L.task=='binary']
 fig,ax=plt.subplots(figsize=(4.6,2.9))
 for f,c in zip(['Botnet','Brute Force','DoS','DDoS','Web Attack'],['#8e44ad','#c0392b','#e67e22','#2471a3','#17a589']):
     x_=L[L.held_out_family==f].sort_values('target_coverage'); ax.plot(100*x_.target_coverage,100*x_.selective_risk,'-o',ms=3,color=c,label=f)
-ax.set_xlabel('Coverage of held-out family flows (%)'); ax.set_ylabel('Selective risk (miss rate, %)'); ax.legend(fontsize=7,frameon=False,ncol=2); ax.set_ylim(0,105)
-plt.tight_layout(); plt.savefig(O+'Figure_3.png',dpi=300,bbox_inches='tight'); plt.close()
+ax.set_xlabel('Coverage of held-out family flows (%)'); ax.set_ylabel('Selective risk (miss rate, %)'); ax.legend(fontsize=7,frameon=False,loc='center left',bbox_to_anchor=(1.0,0.5)); ax.set_ylim(0,105)
+plt.tight_layout(); plt.savefig(O+'Figure_5.png',dpi=300,bbox_inches='tight'); plt.close()
 print('done')
+
+# ---------- Figure 1 (headline result; values from Table 4 / Table 5)
+fig,axs=plt.subplots(1,3,figsize=(7.6,3.0),gridspec_kw={'width_ratios':[1.15,1.15,1]})
+pols=['Fixed','Adaptive','Static\n97.5%','Predictive\nmonitor']
+cols=['#9e9e9e','#c0392b','#2471a3','#17a589']
+viol=[120,3,0,0]; dfr=[0.05,43.4,43.3,47.9]
+b=axs[0].bar(range(4),viol,color=cols); axs[0].set_ylabel('Windows over 1% risk budget\n(of 240)')
+for i,v in enumerate(viol): axs[0].text(i,v+3,str(v),ha='center',fontsize=8)
+axs[0].set_title('(a) Risk-budget violations',fontsize=9)
+axs[1].bar(range(4),dfr,color=cols); axs[1].set_ylabel('Attack flows with no\nautomatic decision (%)')
+for i,v in enumerate(dfr): axs[1].text(i,v+1.5,f'{v:.1f}' if v>=1 else '<0.1',ha='center',fontsize=8)
+axs[1].set_title('(b) Attack deferral',fontsize=9); axs[1].set_ylim(0,60)
+for a in axs[:2]: a.set_xticks(range(4)); a.set_xticklabels(pols,fontsize=6.8)
+r=[16.9,7.4]; axs[2].bar([0,1],r,color=['#9e9e9e','#c0392b']); axs[2].set_xticks([0,1]); axs[2].set_xticklabels(['Fixed','Strictest\n(= adaptive)'],fontsize=6.8)
+axs[2].set_ylabel('Selective risk (%)'); axs[2].set_ylim(0,22); axs[2].set_title('(c) Cross-dataset transfer',fontsize=9)
+axs[2].text(0,r[0]+0.6,'16.9%\n13,789 attacks\ndetected',ha='center',fontsize=7); axs[2].text(1,r[1]+0.6,'7.4%\n0 attacks\ndetected',ha='center',fontsize=7)
+axs[2].axhline(1,ls=':',c='k',lw=0.8)
+plt.tight_layout(); plt.savefig(O+'Figure_1.png',dpi=300,bbox_inches='tight'); print('ok')
+
+import os
+if os.path.exists(O+'_retired_schematic.png'): os.remove(O+'_retired_schematic.png')

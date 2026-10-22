@@ -1,0 +1,4 @@
+# Additional dependencies for re-running the notebooks (not needed for analysis/run_all.py)
+-r requirements.txt
+tensorflow==2.21.0
+keras==3.13.2
