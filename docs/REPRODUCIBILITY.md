@@ -8,8 +8,9 @@
 | Table 4 (deployment sequences) | `results/revision/R2_*` | `analysis/make_table_numbers.py` → `numbers.json["streams"]` |
 | Table 5 (cross-dataset, XGBoost) | `results/revision/R4_*`, `R7_*` | `analysis/external_security.py` |
 | Table 6 (three detector families) | `results/revision_R4_neural/` | notebook 05; `analysis/tables_6_7_8.py` → `table6_neural.csv` |
-| Table 7 (NetFlow replication) | `results/replication_R5_netflow/` | notebook 06; `analysis/tables_6_7_8.py` → `table7_netflow.csv` |
-| Table 8 (asymmetric abstention, BCDR) and Supplementary S17–S18 | `results/acceptall_R7/`, `results/confirmation_R6_ton/`, `results/remedy/` | notebooks 07–08; `analysis/tables_6_7_8.py` → `remedy_exact_results.csv`, `retention_exact.csv` |
+| Table 7 (transferred vs detector-specific neural monitors) and Supplementary S19 | `results/detector_specific_WP2/`, `results/frozen_v2/V2_STEP_13C_*` | notebooks 09–12; `analysis/table7_detector_specific.py` |
+| Table 8 (NetFlow replication) | `results/replication_R5_netflow/` | notebook 06; `analysis/tables_6_7_8.py` → `table7_netflow.csv` |
+| Table 9 (asymmetric abstention, BCDR) and Supplementary S17–S18 | `results/acceptall_R7/`, `results/confirmation_R6_ton/`, `results/remedy/` | notebooks 07–08; `analysis/tables_6_7_8.py` → `remedy_exact_results.csv`, `retention_exact.csv` |
 | Masking-grid and compound results (Supplementary S4–S5) | `results/revision/R3_*`, `R6_*` | `analysis/make_table_numbers.py` |
 | Statistics (McNemar, bootstrap) | `results/revision/R2_*` | `analysis/statistics.py` |
 | Figures 1–5 | as above | `analysis/make_figures.py` |
@@ -28,6 +29,8 @@ Before computing anything new, every post hoc cell (notebooks 03–04) recompute
 | Neural preprocessing vs stored representation (notebook 05, G1) | 0 |
 | CSE-CIC-IDS2018 inputs vs stored XGBoost decisions (notebook 05, G3) | 200,000 of 200,000 identical |
 | Accept-all counts vs stored attack counts (notebook 08, 15 gates) | 0 mismatches in all windows |
+| Historical XGBoost monitor replay (notebook 09, 82 windows) | identical states; max SSS difference 7.2e-11 |
+| Detector-specific pipeline vs notebook 05 outcomes (1,440 rows) | accepted errors identical; accepted counts differ by ≤1 flow |
 
 ## Reproduction note RN-1 (stored-threshold rounding)
 
