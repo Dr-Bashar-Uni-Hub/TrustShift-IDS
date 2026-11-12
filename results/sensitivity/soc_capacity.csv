@@ -1,0 +1,13 @@
+policy,capacity,mean_deferred,max_deferred,windows_over_capacity,deferred_attack_share,unreviewed_attack_share
+Adaptive (TrustShift),250,671,1515,0.562,0.434,0.337
+Adaptive (TrustShift),500,671,1515,0.542,0.434,0.248
+Adaptive (TrustShift),1000,671,1515,0.396,0.434,0.087
+Static Severe,250,909,1515,1.0,0.549,0.407
+Static Severe,500,909,1515,0.696,0.549,0.269
+Static Severe,1000,909,1515,0.417,0.549,0.087
+Static 97.5%,250,549,1158,0.667,0.433,0.277
+Static 97.5%,500,549,1158,0.5,0.433,0.162
+Static 97.5%,1000,549,1158,0.167,0.433,0.016
+Asymmetric Severe,250,557,1117,1.0,0.148,0.105
+Asymmetric Severe,500,557,1117,0.488,0.148,0.063
+Asymmetric Severe,1000,557,1117,0.158,0.148,0.005

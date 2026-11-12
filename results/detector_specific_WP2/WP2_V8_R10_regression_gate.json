@@ -1,0 +1,21 @@
+{
+  "source_notebook": "02_TrustShift_V2_frozen_pipeline.ipynb",
+  "source_cell": "V2.8C-R10",
+  "historical_gate_pass": true,
+  "window_count": 82,
+  "median_sss": 0.15471666155260375,
+  "q95_sss": 0.45611921964636687,
+  "state_counts": {
+    "normal": 75,
+    "elevated": 5,
+    "severe": 2
+  },
+  "max_abs_sss_diff": 7.18471948601973e-11,
+  "state_vector_exact": true,
+  "all_raw_indicators_within_tolerance": true,
+  "q95_state_boundary": 0.4413449708140494,
+  "q99_state_boundary": 0.6791419174145775,
+  "target_labels_used": false,
+  "deployment_evaluated": false,
+  "neural_monitor_reproduced": false
+}

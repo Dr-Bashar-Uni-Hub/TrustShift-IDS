@@ -1,0 +1,5 @@
+detector,alternative,coverage_difference_vs_median,accepted_risk_difference_vs_median,caveat
+MLP,mean,-0.015898333333333348,-0.0012585776041231615,Exploratory alternative aggregation; not coverage-matched
+MLP,max,-0.015898333333333348,-0.0012585776041231615,Exploratory alternative aggregation; not coverage-matched
+FTTransformer,mean,-0.011886666666666712,-0.0006919108091972617,Exploratory alternative aggregation; not coverage-matched
+FTTransformer,max,-0.011886666666666712,-0.0006919108091972617,Exploratory alternative aggregation; not coverage-matched

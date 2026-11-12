@@ -1,0 +1,88 @@
+{
+  "normalization": {
+    "binary_confidence_shift": {
+      "median": 0.19654615446479912,
+      "q95": 0.503475836779355,
+      "scale": 0.3069296823145559,
+      "structural_zero": false
+    },
+    "binary_entropy_shift": {
+      "median": 0.06189195746662024,
+      "q95": 0.1684697597620402,
+      "scale": 0.10657780229541997,
+      "structural_zero": false
+    },
+    "binary_margin_shift": {
+      "median": 0.19654615446479917,
+      "q95": 0.5034758367793548,
+      "scale": 0.30692968231455564,
+      "structural_zero": false
+    },
+    "multiclass_confidence_shift": {
+      "median": 0.07673085433463425,
+      "q95": 0.1682166355011289,
+      "scale": 0.09148578116649464,
+      "structural_zero": false
+    },
+    "multiclass_entropy_shift": {
+      "median": 0.033853267907640525,
+      "q95": 0.07318272851468514,
+      "scale": 0.03932946060704462,
+      "structural_zero": false
+    },
+    "multiclass_margin_shift": {
+      "median": 0.0844580947137308,
+      "q95": 0.17562749336865927,
+      "scale": 0.09116939865492847,
+      "structural_zero": false
+    },
+    "binary_prediction_js": {
+      "median": 1.854905116904269e-05,
+      "q95": 0.0001298503221538224,
+      "scale": 0.00011130127098477971,
+      "structural_zero": false
+    },
+    "multiclass_prediction_js": {
+      "median": 0.00013117343137052594,
+      "q95": 0.00043869679996102004,
+      "scale": 0.0003075233685904941,
+      "structural_zero": false
+    },
+    "feature_shift_mean": {
+      "median": 71.34812929557171,
+      "q95": 144.95541282871744,
+      "scale": 73.60728353314573,
+      "structural_zero": false
+    },
+    "feature_shift_median": {
+      "median": 0.09654803655081942,
+      "q95": 0.14346781887829532,
+      "scale": 0.0469197823274759,
+      "structural_zero": false
+    },
+    "feature_shift_p90": {
+      "median": 15.114759555048723,
+      "q95": 24.214645957855588,
+      "scale": 9.099886402806865,
+      "structural_zero": false
+    },
+    "feature_shift_max": {
+      "median": 2207.185172936999,
+      "q95": 5115.748033012895,
+      "scale": 2908.5628600758955,
+      "structural_zero": false
+    }
+  },
+  "boundaries": [
+    0.4698708538196883,
+    0.6878817738972511
+  ],
+  "binary_temperature": 1.0103093751792966,
+  "multiclass_temperature": 1.0,
+  "calibration_only": true,
+  "window_size": 5000,
+  "n_source_null": 54,
+  "feature_space": "original imputed 68 features",
+  "monitor_families": 3,
+  "source_only": true
+}

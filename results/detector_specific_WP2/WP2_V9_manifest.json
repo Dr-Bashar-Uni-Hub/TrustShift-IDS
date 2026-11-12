@@ -1,0 +1,29 @@
+{
+  "version": "WP2_V9",
+  "detectors": [
+    "MLP",
+    "FTTransformer"
+  ],
+  "seeds": [
+    1,
+    7,
+    21,
+    42
+  ],
+  "windows_per_seed": 60,
+  "window_size": 5000,
+  "n_monitor_rows": 480,
+  "n_policy_rows": 1920,
+  "source_only_monitor_calibration": true,
+  "deployment_labels_used_for_monitor": false,
+  "historical_xgboost_replay": "V8 PASS (separate notebook)",
+  "transferred_xgboost_baseline": "not evaluated",
+  "multiclass_temperature": "1.0 fixed (not calibrated)",
+  "model_retraining": false,
+  "limitations": [
+    "source-null calibration uses 54 windows",
+    "monitor family structure matches original but neural source normalization is newly estimated",
+    "no prospective comparison to transferred XGBoost states yet",
+    "empirical 1% risk threshold does not guarantee target risk"
+  ]
+}

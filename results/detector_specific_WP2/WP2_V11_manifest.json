@@ -1,0 +1,30 @@
+{
+  "version": "WP2_V11",
+  "original_V8_XGBoost_clean_IID_regression": "PASS (from V8; not rerun)",
+  "V9_median_monitor_regression": "PASS",
+  "V9_median_policy_outcome_regression": "PASS",
+  "source_only_aggregation_methods": [
+    "median",
+    "mean",
+    "max"
+  ],
+  "n_neural_detector_windows": 480,
+  "n_aggregation_monitor_rows": 1440,
+  "n_all_threshold_counterfactual_rows": 1440,
+  "n_aggregation_outcome_rows": 1440,
+  "source_only_calibration": true,
+  "deployment_labels_used_for_monitor_calibration": false,
+  "transferred_XGBoost_state_key_aligned_candidates": 0,
+  "transferred_XGBoost_outcome_evaluated": false,
+  "transferred_baseline_status": "BLOCKED pending independently verified exact stream provenance",
+  "interpretation": "Mean/max aggregation exploratory; four orderings share underlying test observations",
+  "files_written": [
+    "WP2_V11_aggregation_policy_summary.csv",
+    "WP2_V11_aggregation_policy_window_results.csv",
+    "WP2_V11_aggregation_tradeoffs.csv",
+    "WP2_V11_all_threshold_window_counterfactuals.csv",
+    "WP2_V11_source_null_aggregation_boundaries.csv",
+    "WP2_V11_source_only_aggregation_states.csv",
+    "WP2_V11_transferred_state_inventory.csv"
+  ]
+}
